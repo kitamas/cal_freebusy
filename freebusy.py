@@ -100,11 +100,11 @@ def main():
 
     start_parameter = dt_str_date1
 
-    #start = start_parameter.isoformat("T", "seconds")
-    start = start_parameter.isoformat() + 'Z'
+    start = start_parameter.isoformat("T", "seconds")
+    #start = start_parameter.isoformat() + 'Z'
 
-    #end = (start_parameter + datetime.timedelta(hours=24)).isoformat("T", "seconds")
-    end = (start_parameter + datetime.timedelta(hours=24)).isoformat() + 'Z'
+    end = (start_parameter + datetime.timedelta(hours=24)).isoformat("T", "seconds")
+    #end = (start_parameter + datetime.timedelta(hours=24)).isoformat() + 'Z'
 
     #datetime1 = datetime.datetime(2022, 09, 29, 0, 0).isoformat("T", "seconds")
     #datetime2 = datetime.datetime(2022, 09, 29, 24, 0).isoformat("T", "seconds")
