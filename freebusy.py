@@ -87,8 +87,8 @@ def main():
     creds = authentication()
     service = build("calendar", "v3", credentials=creds)
 
-    datetime1 = datetime.datetime(2022, 9, 29, 0)
-    datetime2 = datetime.datetime(2022, 9, 29, 24)
+    datetime1 = datetime.datetime(2022, 09, 29, 0, 0)
+    datetime2 = datetime.datetime(2022, 09, 29, 24, 0)
 
     body = {
             "timeMin": datetime1.isoformat(),
