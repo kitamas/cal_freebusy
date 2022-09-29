@@ -87,11 +87,12 @@ def main():
     creds = authentication()
     service = build("calendar", "v3", credentials=creds)
 
-    the_datetime = tz.localize(datetime.datetime(2022, 9, 29, 0))
-    the_datetime2 = tz.localize(datetime.datetime(2022, 9, 29, 24))
+    datetime1 = datetime.datetime(2022, 9, 29, 0)
+    datetime2 = datetime.datetime(2022, 9, 29, 24)
+
     body = {
-            "timeMin": the_datetime.isoformat(),
-            "timeMax": the_datetime2.isoformat(),
+            "timeMin": datetime1.isoformat(),
+            "timeMax": datetime2.isoformat(),
             "timeZone": 'Europe/Budapest',
             "items": [{"id": 'my.email@gmail.com'}]
            }
