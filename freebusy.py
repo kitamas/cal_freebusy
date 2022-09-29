@@ -87,12 +87,29 @@ def main():
     creds = authentication()
     service = build("calendar", "v3", credentials=creds)
 
+    #d = datetime.datetime.now().date()
+    #today = datetime.datetime(d.year, d.month, d.day, 10)+datetime.timedelta(hours=1)
+    #2022-09-25 11:00:00
+    #start = today.isoformat("T", "seconds")
+
+    dt_parameter1 = "2022, 09, 29, 0, 0:
+    #dt_parameter2 = "2022, 09, 29, 24, 0"
+
+    dt_str_date1 = datetime.datetime.strptime(dt_parameter1, '%Y,%m,%d,%H,%M')
+    #dt_str_date2 = datetime.datetime.strptime(dt_parameter2, '%Y,%m,%d,%H,%M')
+
+    start_parameter = dt_str_date1
+
+    start = start_parameter.isoformat("T", "seconds")
+
+    end = (start_parameter + datetime.timedelta(hours=24)).isoformat("T", "seconds")
+
     datetime1 = datetime.datetime(2022, 09, 29, 0, 0).isoformat("T", "seconds")
     datetime2 = datetime.datetime(2022, 09, 29, 24, 0).isoformat("T", "seconds")
 
     body = {
-            "timeMin": datetime1,
-            "timeMax": datetime2,
+            "timeMin": start,
+            "timeMax": end,
             "timeZone": 'Europe/Budapest',
             "items": [{"id": 'my.email@gmail.com'}]
            }
