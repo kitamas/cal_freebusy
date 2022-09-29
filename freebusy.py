@@ -120,6 +120,12 @@ def main():
 
     print(json.dumps(event_result, indent=4))
 
+    text = event_result['calendars']['61u5i3fkss34a4t50vr1j5l7e4@group.calendar.google.com']['busy']
+  
+    return text
+
+    app.run()
+
 """
 {
   "kind": "calendar#freeBusy",
@@ -141,8 +147,3 @@ def main():
   }
 }
 """
-    text = get('event_result').get('busy')
-  
-    return text
-
-    app.run()
