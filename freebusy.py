@@ -118,10 +118,10 @@ def main():
 
     event_result = service.freebusy().query(body=body).execute()
 
-    print(json.dumps(event_result, indent=4))
+    #print(json.dumps(event_result, indent=4))
 
     text = event_result['calendars']['61u5i3fkss34a4t50vr1j5l7e4@group.calendar.google.com']['busy']
-  
+    print(text)
     return text
 
     app.run()
