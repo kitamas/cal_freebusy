@@ -92,7 +92,7 @@ def main():
     #2022-09-25 11:00:00
     #start = today.isoformat("T", "seconds")
 
-    dt_parameter1 = "2022, 09, 29, 0, 0:
+    dt_parameter1 = "2022, 09, 29, 0, 0"
     #dt_parameter2 = "2022, 09, 29, 24, 0"
 
     dt_str_date1 = datetime.datetime.strptime(dt_parameter1, '%Y,%m,%d,%H,%M')
