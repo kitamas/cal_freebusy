@@ -104,8 +104,8 @@ def main():
 
     end = (start_parameter + datetime.timedelta(hours=24)).isoformat("T", "seconds")
 
-    datetime1 = datetime.datetime(2022, 09, 29, 0, 0).isoformat("T", "seconds")
-    datetime2 = datetime.datetime(2022, 09, 29, 24, 0).isoformat("T", "seconds")
+    #datetime1 = datetime.datetime(2022, 09, 29, 0, 0).isoformat("T", "seconds")
+    #datetime2 = datetime.datetime(2022, 09, 29, 24, 0).isoformat("T", "seconds")
 
     body = {
             "timeMin": start,
