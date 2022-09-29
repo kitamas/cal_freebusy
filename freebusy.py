@@ -91,8 +91,8 @@ def main():
     datetime2 = datetime.datetime(2022, 09, 29, 24, 0).isoformat("T", "seconds")
 
     body = {
-            "timeMin": datetime1.isoformat(),
-            "timeMax": datetime2.isoformat(),
+            "timeMin": datetime1,
+            "timeMax": datetime2,
             "timeZone": 'Europe/Budapest',
             "items": [{"id": 'my.email@gmail.com'}]
            }
