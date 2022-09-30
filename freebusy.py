@@ -88,6 +88,7 @@ def main():
     service = build("calendar", "v3", credentials=creds)
 
     req = request.get_json(force=True)
+    print("REQ")
     print(json.dumps(req, indent=4))
 
     #d = datetime.datetime.now().date()
@@ -121,6 +122,7 @@ def main():
 
     event_result = service.freebusy().query(body=body).execute()
 
+    print("EVENT RESULT")
     print(json.dumps(event_result, indent=4))
 
     text = str(event_result['calendars']['61u5i3fkss34a4t50vr1j5l7e4@group.calendar.google.com']['busy'])
