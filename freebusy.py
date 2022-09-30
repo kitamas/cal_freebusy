@@ -87,6 +87,9 @@ def main():
     creds = authentication()
     service = build("calendar", "v3", credentials=creds)
 
+    req = request.get_json(force=True)
+    print(json.dumps(req, indent=4))
+
     #d = datetime.datetime.now().date()
     #today = datetime.datetime(d.year, d.month, d.day, 10)+datetime.timedelta(hours=1)
     #2022-09-25 11:00:00
@@ -118,7 +121,7 @@ def main():
 
     event_result = service.freebusy().query(body=body).execute()
 
-    #print(json.dumps(event_result, indent=4))
+    print(json.dumps(event_result, indent=4))
 
     text = str(event_result['calendars']['61u5i3fkss34a4t50vr1j5l7e4@group.calendar.google.com']['busy'])
 
