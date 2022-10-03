@@ -41,8 +41,8 @@ def authentication():
     {
   "type": "service_account",
   "project_id": "my-project-90818-learn-hun",
-  "private_key_id": "5af4d0f2630d0c5701bbd094a4245c4d336396a7",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDk76CnM/T/6sGI\n0S1UaK/mE0mSiVeZIY+KKsCn01mrdcVttTcyJPkgy8bBv9idWITlQbRGaAOgLudy\nTVbqHb0ma99koIBf2HI67z6fzMPJOw4q1VqG550Bj933v/GON8exdM2zr9HvaLXJ\nmTCloOwbV91O0O57X1uVBVz9oAZCLrJhPaHRKq2zr7asH5VgyX3eX772d1MCA3pS\ntyXbMVMXDdKji06FjV2ctRUVszr2zE2lcqtV4GVXlrUAKy9IOBbdRGkeVBW82qXz\nNCRXXkuLsRjd7JLawhHsKgpjAJLQBTKkvgfWggYtSV4VynsEDG8a3321SGphTgI0\ns4lgiiGpAgMBAAECggEAAuH+lqRpmSBiY//oT3gLAP1sr37xvrCkv1Nm/iYD6swO\nmqFNyuCaz34paE6rYl3XPJDNfZZ5Nzbn/LE7HzMVKurwUvLPcwWFeLcDBZ2dOIc5\nGDJ8E5dOi5K9c41z8/vBVLt5DKJx5Q8fPOTkLy2902FRnNi2LBEJFPEOmPX/Ji2s\nwQD9qhRmEDMOQBiEWTTE0gPoISYp062QcIc30SHItdNdo0iNuz3SK1yq7Fq2vDMS\nUYK0YuSTmxu2NGw5kSFY9mKCbRwCDnTvc74PLvmqIxm0DTkiySNVCx1lAs5h3Gaz\n2Qw4osX3CIotoKAaMf6FuFgR/f+elF0uBZ+JCt1HNQKBgQD7D1/NwUFOuB0N6pq3\n+NNy0seqZmpibBr5Pjerzqf9ZrBk6VCR2VA/cjmzk28npd0bzaTZZ709ncbpidXG\n1+Yfy6y4j24pSULKcXHeS6up0OZzaJgyghbhOQ0RE5d/NhvS2quSXM/YaIaVzQdN\nBdh1ZZNKrmtwe5Cd2JWmFWwUTQKBgQDpcM+9PWpLy/8Xw4esjnfbfsQpo7xK+7DJ\nBRf+FuWrvOejWOtlfXVe8WBhvBPPaEKOzXt91VUFi6WqErNnjZV7/6/KHRJjHg46\n/wCSMPhQ/jvnKvnymj3JB1qqnCSLy/2dmTFYZR0HOUGbIdZkBFb2ajbsWvkGnwJf\nEeGn62VgzQKBgQDJd2Hq7A0rTWXLWBtGTL/p4almXX87cgMHRd1I2rJGD9S3dd84\n2wmhkFkreMF3MIvJlvGVoMDkpCsOF5TcVz6M/1WgWUEOkoKtj/HPcCvWPxPfQuz3\ngxs3KyAINw+YfuQ/BUkvT5le0SpHJduY/HriYlubT3JaNl4rvLUCLSio9QKBgQCj\nM8Vorhk0aKgs+vxNfUT6ZYPLALfRTGlqAG+nqmZjTKw9HRtlVvLJr8MMUSsgY+m0\nYKAndw/70oe9gVl/2hJaIIXLrct/FDIquMCzdB0Gstc6ZGdeXss3Ujbm9EbwnWrv\n1XwUKozC0hq11FBImGgb2mIPmAJlyKElyiCS/xVfOQKBgH+Djwz8TPUIibKIK/cZ\nLgQWi7OmU5q7waRlYFEXa86qx1XhfNZI0hdDKQGFm6/E7xvlYfsvaxy3mWt2H7aP\nT395BTGaOvd1iMJc+KKG7/0dwsF9TNe2bLayukYn1pv/sax/CDMe9nWAWz47LyuH\ni5DwBThM9ioEUpec0sYCjl8B\n-----END PRIVATE KEY-----\n",
+  "private_key_id": "cf8bd4105633c3cac528d1c8c4c66cc3b825e837",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCeQrDkS5Rq/khX\nNoU01bLEbZHj/JjzwlcozMB0uRP+H9NYJytYrl4+vqhi3+EApY+bKpU/iB/A9tPC\nVIYjhXeACCXtNq6sz8hQDN6y+cKW5K4i2yd1xpeIlAXjo4M/uRIarlffgEi3MOAX\nRtTDskXvECuu2rXsIbgQEBzpCwJQhaVWnOHk4ONTJnEKSjvtuHXRZUc6GrabLrLU\nb4h1nDYh8+IVoUxpcZg0sW9XWpXw2O3kh8o6ADy4aH2KB9Sv4yktLLNcVWrqisei\nekA93NnWji5pG2DKuqjrmaZGA9SwOA5gT34EfrbL8zVFaEGgV7yp5ytrTg5vmtaw\nP36j58iJAgMBAAECggEAG5iV900NjYWXECwX2LFtuW5AuwBEHHc2Ew12/rN6Hr0m\ncW/tEUrgcLD2tD0FI0N7UcuAWGJwZQm1PaTW+hEvGAJzuJQpK8WUkI7Z81v1WDH6\ngmX0EMenC0ACceIEhCNNmpztgjHAnD73yF9HwPMQWkIX1+bXw5vSmGxy2hkbF3ac\nKehAlVB584QC8L191WtWPpx27pdNy2ncnlW6Xaail8NtGlCELLGrmicQUjgxZhsU\ngEZh/ZrTYm4ion5mWCYtbSvuXN++9Zy6kIdpYiFOroQuEr48L6l0KLmVvNsuZ1D0\nk4xdXJxtx0kacGr0tyg1VV3vut14vcSlDqbeDUy7DQKBgQC/5LuQVTJT3FiJ13sb\nCyJIuFVQAX2p1+TXsiKJh9Copaua0tvXygJtbGFEVmYKS3VwiC8OyESQQhATFORE\nYZYpek0UwhNggekg+asiMMSnPc/hHkxQdsxmT34sfmuooSeDvqrVPw6BW3i7Hb6Q\nB7lfydH+v6VejPKWm2q7sm6UpQKBgQDTIZJ/rdgknqnIENgcHwRJoKS3j2RcCvnK\nu0pXoumA9xq1/JFOCuGmRnscyga0d17fYGpER3iR5NL2YAksMSUEDyj+yFupHyfS\nTZzVVaeYNW3OKjDXwUDGYh2D3JkF7P6zeC9LLBkvwuhllvwC1URewWARBpreVGpH\nuZGRo6CLFQKBgHnO9yTif+TtzSIKr3F2OtgQcs8rcxpaGkC1KelFVjWHnIvV54lu\nCOZu0rtvYKyOQ8kgGUb351XvKYcDTvb9PzWrFbzkiSpMrLCq62/zpxFGUmvjMKwv\nDQaw1TXnNe3ABnZBlO1yboG8j8GvWuTQkmJ0mSFtg8qmC+OAWls1I66lAoGAZCvL\njBR5Nnao6ylCv6Tfrecv/39jCGCUv2E5FndO/kc/PxUEA9kZ0oAiLTiVEc6JDsZ5\n5MdcJyxAA3DxKSxv+YsP0kJRat5DUH5OaNFo4MiIvoY6AkPIbddjVYq2d59IAPKG\nzc2wbX62MG0ASH/THnn1EF7n35CBlGIw9L6DjzkCgYEAu0LhdTHuuM6DOAfh4ohw\n0oj2770Dyw0vQImp+4qbdocLqXIVOZYEIywGfi+OLuSxrSYsw2BuTAPAtIEmkuHx\n4cvV/XxcWWPY30B4Z2irOBIsIXJjfAO/DyCyDaX7Cmoy+NgoCwRSRzDeOiQ7ysw8\nhwrS/OoTx3BhHYJt+NO6qIM=\n-----END PRIVATE KEY-----\n",
   "client_email": "appointment-scheduler@my-project-90818-learn-hun.iam.gserviceaccount.com",
   "client_id": "115405775326578876255",
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
@@ -130,25 +130,3 @@ def main():
     return text
 
     app.run()
-
-"""
-{
-  "kind": "calendar#freeBusy",
-  "timeMin": "2022-09-29T00:00:00.000Z",
-  "timeMax": "2022-09-30T00:00:00.000Z",
-  "calendars": {
-    "61u5i3fkss34a4t50vr1j5l7e4@group.calendar.google.com": {
-      "busy": [
-        {
-          "start": "2022-09-29T16:00:00+02:00",
-          "end": "2022-09-29T17:00:00+02:00"
-        },
-        {
-          "start": "2022-09-29T18:00:00+02:00",
-          "end": "2022-09-29T19:00:00+02:00"
-        }
-      ]
-    }
-  }
-}
-"""
