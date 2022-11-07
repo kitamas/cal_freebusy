@@ -90,7 +90,7 @@ def main():
     req = request.get_json(force=True)
     #print(json.dumps(req, indent=4))
 
-    start_str = "2022,11,7,11,0"
+    start_str = "2022,11,7,9,0"
     end_str = "2022,11,7,14,0"
 
     start_str1 = datetime.datetime.strptime(start_str, '%Y,%m,%d,%H,%M')
@@ -98,6 +98,8 @@ def main():
 
     start = start_str1.isoformat() + 'Z'
     end = end_str1.isoformat() + 'Z'
+    print("START = ",start)
+    print("END = ",end)
 
     #datetime1 = datetime.datetime(2022, 09, 29, 0, 0).isoformat("T", "seconds")
     #datetime2 = datetime.datetime(2022, 09, 29, 24, 0).isoformat("T", "seconds")
