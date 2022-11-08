@@ -52,7 +52,7 @@ def main():
     gpt3_latin1 = req.get('sessionInfo').get('parameters').get('gpt3')
     #gpt3_utf = gpt3_latin1.decode('iso-8859-1').encode('utf8')
     #print("gpt3 parameter UTF = ",gpt3_utf)
-    gtp3 = gpt3_latin1
+    gpt3 = gpt3_latin1
 
     temp = req.get('sessionInfo').get('parameters').get('temp')
     temp_str = str(temp)
