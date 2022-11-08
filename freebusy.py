@@ -46,6 +46,13 @@ def webhook():
 
 def main():
 
+    req = request.get_json(force=True)
+    print(json.dumps(req, indent=4))
+
+    gpt3 = req.get('sessionInfo').get('parameters').get('gpt3')
+
+    print("WW",gtp3)
+
     cookies = {
     'secret': 'contemporary',
     }
