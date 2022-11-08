@@ -62,9 +62,9 @@ def main():
     }
 
     #req_data = '{"data":"Ki nyer ma","topk:":"0","temp":".1"}'
-    data = {"data":"Ki nyer ma","topk:":"0","temp":".1"}
-    data['data'] = "Milyen nap van ma"
-    data = str(data)
+    data = '{"data":"' + gpt3 + '","topk:":"0","temp":".1"}'
+    #data['data'] = "Milyen nap van ma"
+    #data = str(data)
     #data.update({'data':'Milyen nap van ma'})
 
     response = requests.post('https://polka.nytud.hu/tcom/gpt3/', headers=headers, cookies=cookies, data=data)
