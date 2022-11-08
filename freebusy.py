@@ -51,7 +51,7 @@ def main():
 
     gpt3 = req.get('sessionInfo').get('parameters').get('gpt3')
 
-    print("WW",gtp3)
+    print("WW",gpt3)
 
     cookies = {
     'secret': 'contemporary',
