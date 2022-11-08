@@ -1,19 +1,73 @@
+import flask
+import json
+import os
+from flask import send_from_directory, request
+
 import requests
 
-cookies = {
-    'secret ': ' contemporary',
-}
 
-headers = {
-    # Already added when you pass json=
-    # 'Content-Type': 'application/json',
-    # 'Cookie': 'secret = contemporary',
-}
+# Flask app should start in global layout
+app = flask.Flask(__name__)
 
-json_data = {
-    'data': 'Ki nyer ma',
-    'topk:': '0',
-    'temp': '.1',
-}
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/favicon.png')
 
-response = requests.post('https://polka.nytud.hu/tcom/gpt3/', cookies=cookies, headers=headers, json=json_data)
+@app.route('/')
+
+
+@app.route('/webhook', methods=['GET','POST'])
+def webhook():
+
+    text = main()
+
+    res = {
+        "fulfillment_response": {
+            "messages": [
+                {
+                    "text": {
+                        "text": [
+                            text
+                        ]
+                    }
+                }
+            ]
+        },
+        "session_info": {
+            "session" : "session_name",
+            "parameters": {
+                "event_id" : "event_id"
+            }
+        }
+    }
+
+    return res
+
+def main():
+
+    cookies = {
+    'secret': 'contemporary',
+    }
+
+    headers = {
+    'Content-Type': 'application/json',
+    }
+
+    data = '{"data":"Ki nyer ma","topk:":"0","temp":".1"}'
+
+    response = requests.post('https://polka.nytud.hu/tcom/gpt3/', headers=headers, cookies=cookies, data=data)
+    print(response.json())
+
+    text = response.json()['text']
+    print("text = ",text)
+
+    return text
+
+    app.run()
+
+
+
+
+
+
