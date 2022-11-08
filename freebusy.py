@@ -65,7 +65,7 @@ def main():
 
     # data = '{"data":"Ki nyer ma","topk:":"0","temp":".1"}'
     # data = '{"data":"' + gpt3 + '","topk:":"0","temp":".1"}'
-    data = '{"data":"' + gpt3 + '","topk:":"0","temp":"' + temp + '"}'
+    data = '{"data":"' + gpt3 + '","topk:":"0","temp":"' + str(temp) + '"}'
 
     print("data =",data)
     response = requests.post('https://polka.nytud.hu/tcom/gpt3/', headers=headers, cookies=cookies, data=data)
