@@ -61,11 +61,11 @@ def main():
     'Content-Type': 'application/json',
     }
 
-    #data = '{"data":"Ki nyer ma","topk:":"0","temp":".1"}'
-    data = '{"data":"Ki nyer ma","topk:":"0","temp":".1"}'
-    data['data'] = "Milyen nap van ma"
+    #req_data = '{"data":"Ki nyer ma","topk:":"0","temp":".1"}'
+    req_data = {"data":"Ki nyer ma","topk:":"0","temp":".1"}
+    #req_data['data'] = "Milyen nap van ma"
 
-    response = requests.post('https://polka.nytud.hu/tcom/gpt3/', headers=headers, cookies=cookies, data=data)
+    response = requests.post('https://polka.nytud.hu/tcom/gpt3/', headers=headers, cookies=cookies, data=req_data)
     print(response.json())
 
     text = response.json()['text']
