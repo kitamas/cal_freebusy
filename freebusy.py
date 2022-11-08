@@ -50,10 +50,12 @@ def main():
     print(json.dumps(req, indent=4))
 
     gpt3 = req.get('sessionInfo').get('parameters').get('gpt3')
-    temp = req.get('sessionInfo').get('parameters').get('temp')
+    gpt3_utf = gpt3.encode('utf-8') 
+    print("gpt3 parameter UTF = ",gpt3_utf)
 
-    print("gpt3 parameter = ",gpt3)
-    print("temp parameter = ",temp)
+    temp = req.get('sessionInfo').get('parameters').get('temp')
+    temp_str = str(temp)
+    print("temp parameter str = ",temp_str)
 
     cookies = {
     'secret': 'contemporary',
@@ -65,7 +67,7 @@ def main():
 
     # data = '{"data":"Ki nyer ma","topk:":"0","temp":".1"}'
     # data = '{"data":"' + gpt3 + '","topk:":"0","temp":".1"}'
-    data = '{"data":"' + gpt3 + '","topk:":"0","temp":"' + str(temp) + '"}'
+    data = '{"data":"' + gpt3 + '","topk:":"0","temp":"' + temp_str + '"}'
 
     print("data =",data)
     response = requests.post('https://polka.nytud.hu/tcom/gpt3/', headers=headers, cookies=cookies, data=data)
