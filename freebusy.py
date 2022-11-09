@@ -4,7 +4,7 @@ import os
 from flask import send_from_directory, request
 
 import requests
-
+import locale
 
 # Flask app should start in global layout
 app = flask.Flask(__name__)
