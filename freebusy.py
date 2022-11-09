@@ -72,6 +72,7 @@ def main():
     print("DATA =",data)
     print("RESPONSE JSON 111 = ")
     response = requests.post('https://polka.nytud.hu/tcom/gpt3/', headers=headers, cookies=cookies, data=data)
+    print("TYPE RESPONSE = ",type(response))
     print("RESPONSE LENGTH = ",response.length())
     print("RESPONSE JSON = ",response.json())
     print("RESPONSE JSON 222 = ")
