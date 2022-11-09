@@ -51,8 +51,12 @@ def main():
 
     gpt3 = req.get('sessionInfo').get('parameters').get('gpt3')
 
-    temp = req.get('sessionInfo').get('parameters').get('temp')
-    temp_str = str(temp)
+    if req.get('sessionInfo').get('parameters').get('temp') != "":
+        temp = req.get('sessionInfo').get('parameters').get('temp')
+        temp_str = str(temp)
+    else:
+        temp_str = str(.3)
+
     print("temp parameter str = ",temp_str)
 
     cookies = {
