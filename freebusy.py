@@ -49,10 +49,7 @@ def main():
     req = request.get_json(force=True)
     print(json.dumps(req, indent=4))
 
-    gpt3_latin1 = req.get('sessionInfo').get('parameters').get('gpt3')
-    #gpt3_utf = gpt3_latin1.decode('iso-8859-1').encode('utf8')
-    #print("gpt3 parameter UTF = ",gpt3_utf)
-    gpt3 = gpt3_latin1
+    gpt3 = req.get('sessionInfo').get('parameters').get('gpt3')
 
     temp = req.get('sessionInfo').get('parameters').get('temp')
     temp_str = str(temp)
@@ -69,10 +66,11 @@ def main():
     # data = '{"data":"Ki nyer ma","topk:":"0","temp":".1"}'
     # data = '{"data":"' + gpt3 + '","topk:":"0","temp":".1"}'
     data = '{"data":"' + gpt3 + '","topk:":"0","temp":"' + temp_str + '"}'
+    data = data.encode('utf-8')
 
     print("data =",data)
-    #response = requests.post('https://polka.nytud.hu/tcom/gpt3/', headers=headers, cookies=cookies, data=data)
-    response = requests.post('https://polka.nytud.hu/tcom/gpt3/', headers=headers, cookies=cookies, data=data.encode('utf-8'))
+
+    response = requests.post('https://polka.nytud.hu/tcom/gpt3/', headers=headers, cookies=cookies, data=data)
     print(response.json())
 
     text = response.json()['text']
