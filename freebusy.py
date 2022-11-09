@@ -46,10 +46,11 @@ def webhook():
 def main():
 
     req = request.get_json(force=True)
+    print("REQ JSON DUMP")
     print(json.dumps(req, indent=4))
 
     gpt3 = req.get('sessionInfo').get('parameters').get('gpt3')
-
+    print("GPT3 PARAMETER  = ",gpt3)
     temp = req.get('sessionInfo').get('parameters').get('temp')
     temp_str = str(temp)
 
