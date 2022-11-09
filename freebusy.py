@@ -71,7 +71,8 @@ def main():
     data = '{"data":"' + gpt3 + '","topk:":"0","temp":"' + temp_str + '"}'
 
     print("data =",data)
-    response = requests.post('https://polka.nytud.hu/tcom/gpt3/', headers=headers, cookies=cookies, data=data)
+    #response = requests.post('https://polka.nytud.hu/tcom/gpt3/', headers=headers, cookies=cookies, data=data)
+    response = requests.post('https://polka.nytud.hu/tcom/gpt3/', headers=headers, cookies=cookies, data=data.encode('utf-8'))
     print(response.json())
 
     text = response.json()['text']
