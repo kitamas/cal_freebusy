@@ -66,7 +66,7 @@ def main():
     # data = '{"data":"Ki nyer ma","topk:":"0","temp":".1"}'
     # data = '{"data":"' + gpt3 + '","topk:":"0","temp":".1"}'
     data = '{"data":"' + gpt3 + '","topk:":"0","temp":"' + temp_str + '"}'
-    data = data.encode('utf-8')
+    #data = data.encode('utf-8')
 
     print("DATA =",data)
 
