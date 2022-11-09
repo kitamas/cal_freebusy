@@ -53,7 +53,7 @@ def main():
     temp = req.get('sessionInfo').get('parameters').get('temp')
     temp_str = str(temp)
 
-    print("temp parameter str = ",temp_str)
+    print("TEMP PARAMETER STR = ",temp_str)
 
     cookies = {
     'secret': 'contemporary',
@@ -68,13 +68,13 @@ def main():
     data = '{"data":"' + gpt3 + '","topk:":"0","temp":"' + temp_str + '"}'
     data = data.encode('utf-8')
 
-    print("data =",data)
+    print("DATA =",data)
 
     response = requests.post('https://polka.nytud.hu/tcom/gpt3/', headers=headers, cookies=cookies, data=data)
-    print(response.json())
+    print("RESPONSE JSON = ",response.json())
 
     text = response.json()['text']
-    print("text = ",text)
+    print("TEXT = ",text)
 
     return text
 
