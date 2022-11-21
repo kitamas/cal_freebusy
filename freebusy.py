@@ -21,7 +21,7 @@ def favicon():
 @app.route('/webhook', methods=['GET','POST'])
 def webhook():
 
-    text = main()
+    text = ask()
 
     res = {
         "fulfillment_response": {
@@ -45,7 +45,8 @@ def webhook():
 
     return res
 
-def main():
+
+def ask(question,chat_log=None):
 
     req = request.get_json(force=True)
     print("REQ JSON DUMP")
@@ -53,6 +54,7 @@ def main():
 
     gpt3 = req.get('sessionInfo').get('parameters').get('gpt3')
     print("GPT3 PARAMETER  = ",gpt3)
+    question = gpt3
     # temp = req.get('sessionInfo').get('parameters').get('temp')
     # temp_str = str(temp)
 
@@ -67,39 +69,33 @@ def main():
     'Content-Type': 'application/json',
     }
 
-    OPENAI_API_KEY = "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"
-    COMPLETIONS_MODEL = "text-davinci-002"
 
-    openai.api_key = os.getenv("OPENAI_API_KEY")
-
-    """
-    openai.Completion.create(
-        model=COMPLETIONS_MODEL,
-        prompt="Hello world",
-        max_tokens=6,
+    prompt_text = f'{chat_log}{restart_sequence}: {question}{start_sequence}:'
+    response = openai.Completion.create(
+        engine = davinci,
+        prompt = prompt_text,
+        max_tokens=45,
         temperature=0.3,
         top_p=1,
         frequency_penalty=0,
-        presence_penalty=0
-    )["choices"][0]["text"].strip(" \n")
-    """
-    completion = openai.Completion.create(engine="text-davinci-002", prompt="Hello world")
+        presence_penalty=0.3,
+        stop=["\n"],
+    )
+    story = response["choices"][0]["text"].strip(" \n")
+    return str(story)
 
-    # print the completion
-    print(completion.choices[0].text)
-
-        # prompt=prompt,
-        # model="text-davinci-002",
+    print("STORY = ",story)
 
     #data = '{"data":"' + gpt3 + '","topk:":"0","temp":"' + temp_str + '"}'
     #data = data.encode('utf-8')
-
     #response = requests.post('https://polka.nytud.hu/tcom/gpt3/', headers=headers, cookies=cookies, data=data)
+    # text = response.json()['text']
+    # print("TEXT = ",text)
 
-    text = response.json()['text']
-    print("TEXT = ",text)
-
-    return text
+def append_interaction_t_chat_log(question,answer,chat_log=None):
+    if chat_log is None:
+        chat_log = session_prompt
+    return f'{chat_log}{restart_sequence} {question}{start_sequence}{answer}'
 
     app.run()
 
