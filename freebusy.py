@@ -79,11 +79,12 @@ def main():
 
 
     response = requests.post('https://api.openai.com/v1/completions', headers=headers, json=json_data)
-    print("RESPONSE = ",response)
+    print("RESPONSE = ",type(response))
     #text = response.json()['text']
-    #print("TEXT = ",text)
 
-    return response
+    text = response.json()
+    #print("TEXT = ",text)
+    return text
 
     app.run()
 
