@@ -61,14 +61,15 @@ def main():
     # print("TEMP PARAMETER STR = ",temp_str)
 
     headers = {
-    # 'Content-Type': 'application/json',
-    'Authorization': 'Bearer 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'
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer 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',
     }
 
-    json_data = {
+
+    json_data1 = {
     'model': 'text-davinci-002',
     'prompt': 'Say this is a test',
-    'max_tokens': 6,
+    'max_tokens': 45,
     'temperature': 0.3,
     'top_p':1,
     'frequency_penalty':0,
@@ -76,12 +77,14 @@ def main():
     'stop':["\n"],
     }
 
+    json_data = '{ "model": "text-davinci-002","prompt": "Say this is a test", "max_tokens": 45,  "temperature": 0.3}'
 
     response = requests.post('https://api.openai.com/v1/completions', headers=headers, json=json_data)
     print("RESPONSE = ",type(response))
     #text = response.json()['text']
 
     text = response.json()
+    print(response.content)
     print("TEXT = ",text)
     return text
 
