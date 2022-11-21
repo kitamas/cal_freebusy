@@ -21,7 +21,7 @@ def favicon():
 @app.route('/webhook', methods=['GET','POST'])
 def webhook():
 
-    text = ask()
+    text = main()
 
     res = {
         "fulfillment_response": {
@@ -46,7 +46,7 @@ def webhook():
     return res
 
 
-def ask(question,chat_log=None):
+def main():
 
     req = request.get_json(force=True)
     print("REQ JSON DUMP")
@@ -61,8 +61,9 @@ def ask(question,chat_log=None):
     # print("TEMP PARAMETER STR = ",temp_str)
 
     headers = {
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer YOUR_API_KEY',
+    # Already added when you pass json= but not when you pass data=
+    # 'Content-Type': 'application/json',
+    'Authorization': 'Bearer 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',
     }
 
     json_data = {
