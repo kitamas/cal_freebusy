@@ -61,9 +61,8 @@ def main():
     # print("TEMP PARAMETER STR = ",temp_str)
 
     headers = {
-    # Already added when you pass json= but not when you pass data=
     # 'Content-Type': 'application/json',
-    'Authorization': 'Bearer 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',
+    'Authorization': 'Bearer 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'
     }
 
     json_data = {
@@ -83,7 +82,7 @@ def main():
     #text = response.json()['text']
 
     text = response.json()
-    #print("TEXT = ",text)
+    print("TEXT = ",text)
     return text
 
     app.run()
