@@ -62,7 +62,7 @@ def main():
 
     headers = {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer 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',
+    'Authorization': 'Bearer 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',
     }
 
 
