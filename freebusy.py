@@ -38,6 +38,19 @@ def webhook():
     res = {
         "fulfillment_response": {
             "messages": [{
+                "text": {
+                    "text": [
+                        text
+                    ]
+                }
+            }]
+        }
+    }
+
+    """
+    res = {
+        "fulfillment_response": {
+            "messages": [{
                 "text": {: [
                         "Please select anyone"
                     ]
@@ -69,6 +82,7 @@ def webhook():
             }]
         }
     } 
+    """
 
 """
 res = {
