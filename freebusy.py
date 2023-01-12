@@ -42,8 +42,6 @@ def webhook():
                     "text": [
                         text
                     ]
-                }
-            }]
         },
            "payload":{
                "richContent":[
