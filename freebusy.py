@@ -43,6 +43,45 @@ def webhook():
                         text
                     ]
                 }
+        },
+        {"payload": {
+            "richContent": [
+                [{
+                    "type": "chips",
+                    "options": [{
+                        "text": "Chip 1",
+                        "image": {
+                            "src": {
+                                "rawUrl": "https://example.com/images/logo.png"
+                            }
+                        },
+                        "link": "https://example.com"
+                    }, {
+                        "text": "Chip 2",
+                        "image": {
+                            "src": {
+                                "rawUrl": "https://example.com/images/logo.png"
+                            }
+                        },
+                        "link": "https://example.com"
+                    }]
+                }]
+            ]
+        }
+    }
+	]
+	}
+	}
+
+    """
+    res = {
+        "fulfillment_response": {
+            "messages": [{
+                "text": {
+                    "text": [
+                        text
+                    ]
+                }
             }]
         },
         "payload": {
@@ -70,5 +109,5 @@ def webhook():
             ]
         }
     }
-    
+    """    
     return res
