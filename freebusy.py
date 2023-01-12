@@ -54,7 +54,7 @@ def authentication():
 @app.route('/webhook', methods=['GET','POST'])
 def webhook():
 
-    text = "this is the text"
+    text = "*1 markdown text*, **2 markdown text**, 3 markdown text  \n"
 
     res = {
         "fulfillment_response": {
