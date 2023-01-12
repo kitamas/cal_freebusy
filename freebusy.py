@@ -75,8 +75,5 @@ def webhook():
 
    return res
 
-"""
-
-
-"""    
+app.run()
  
