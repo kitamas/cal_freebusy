@@ -36,54 +36,6 @@ def webhook():
     text = "*1 markdown text*, **2 markdown text**, 3 markdown text  \n"
 
     res = {
-       "fulfillment_response":{
-          "messages":[
-             {
-                "text":{
-                   "text":[
-                      text
-                   ]
-                }
-             },
-             {
-                "payload":{
-                   "richContent":[
-                      [
-                         {
-                            "type":"chips",
-                            "options":[
-                               {
-                                  "text":"Chip 1",
-                                  "image":{
-                                     "src":{
-                                        "rawUrl":"https://example.com/images/logo.png"
-                                     }
-                                  },
-                                  "link":"https://example.com"
-                               },
-                               {
-                                  "text":"Chip 2",
-                                  "image":{
-                                     "src":{
-                                        "rawUrl":"https://example.com/images/logo.png"
-                                     }
-                                  },
-                                  "link":"https://example.com"
-                               }
-                            ]
-                         }
-                      ]
-                   ]
-                }
-             }
-          ]
-       }
-    }
-
-   return res
-
-"""
-    res = {
         "fulfillment_response": {
             "messages": [{
                 "text": {
@@ -120,6 +72,11 @@ def webhook():
 	]
 	}
 	}
+
+   return res
+
+"""
+
 
 """    
  
