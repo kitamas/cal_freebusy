@@ -64,32 +64,33 @@ def webhook():
                         text
                     ]
                 }
-            }, {
-                "payload": {
-                    "richContent": [
-                        [{
-                            "type": "info",
-                            "title": "Info item title, card clickable tts.mp3",
-                            "subtitle": "Info item subtitle, robot.mp3",
-                            "image": {
-                                "src": {
-                                    "rawUrl": "https://elearning.dev.unideb.hu/moodle37/webservice/moodlebot/robot_icon.png"
-                                }
-                            },
-                            "actionLink": "https://elearning.dev.unideb.hu/moodle37/webservice/moodlebot/tts.mp3"
-                        }]
-                    ]
-                }
-            }]
-        },
-        "session_info": {
-            "session": "session_name",
-            "parameters": {
-                "event_id": "event_id"
-            }
-        }
+            },
+    {
+      "richContent": [
+        [
+          {
+            "options": [
+              {
+                "event": {
+                  "parameters": {
+                    "param1": "android"
+                  },
+                  "name": "",
+                  "languageCode": ""
+                },
+                "text": "hibabejelentés"
+              },
+              {
+                "text": "ügyfélszolgálat"
+              }
+            ],
+            "type": "chips"
+          }
+        ]
+      ]
     }
-
+    }
+    }	
 """
     res = {
         "fulfillment_response": {
