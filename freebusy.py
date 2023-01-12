@@ -55,10 +55,10 @@ def webhook():
                             "subtitle":"Info item subtitle, robot.mp3",
                             "image":{
                                "src":{
-                                  "rawUrl":"https://elearning.dev.unideb.hu/moodle37/webservice/moodlebot/robot_icon.png"
+                                  "rawUrl":"https://dev.da.tsmcloud.hu/images/robot_icon.png"
                                }
                             },
-                            "actionLink":"https://elearning.dev.unideb.hu/moodle37/webservice/moodlebot/tts.mp3"
+                            "actionLink":"https://dev.da.tsmcloud.hu/mp3/tts.mp3"
                          }
                       ]
                    ]
@@ -129,7 +129,7 @@ def webhook():
                    "richContent":[
                       [
                          {
-                            "link":"https://elearning.dev.unideb.hu/moodle37/webservice/moodlebot/robot.mp3",
+                            "link":"https://dev.da.tsmcloud.hu/mp3/robot.mp3",
                             "text":"BUTTON link /robot.mp3",
                             "icon":{
                                "type":"link",
@@ -176,16 +176,16 @@ def webhook():
                                   "text":"robot",
                                   "image":{
                                      "src":{
-                                        "rawUrl":"https://elearning.dev.unideb.hu/moodle37/webservice/moodlebot/robot_icon.png"
+                                        "rawUrl":"https://dev.da.tsmcloud.hu/images/robot_icon.png"
                                      }
                                   },
-                                  "link":"https://elearning.dev.unideb.hu/moodle37/webservice/moodlebot/robot.mp3"
+                                  "link":"https://dev.da.tsmcloud.hu/mp3/robot.mp3"
                                },
                                {
                                   "text":"yes",
                                   "image":{
                                      "src":{
-                                        "rawUrl":"https://elearning.dev.unideb.hu/moodle37/webservice/moodlebot/yes.png"
+                                        "rawUrl":"https://dev.da.tsmcloud.hu/images/yes.png"
                                      }
                                   },
                                   "link":"https://cloud.google.com/dialogflow/case-studies"
@@ -194,7 +194,7 @@ def webhook():
                                   "text":"no",
                                   "image":{
                                      "src":{
-                                        "rawUrl":"https://elearning.dev.unideb.hu/moodle37/webservice/moodlebot/no.png"
+                                        "rawUrl":"https://dev.da.tsmcloud.hu/images/no.png"
                                      }
                                   },
                                   "link":"https://cloud.google.com/dialogflow/docs"
