@@ -53,7 +53,7 @@ def webhook():
                             "type":"chips",
                             "options":[
                                {
-                                  "text":"*1 markdown text*, **2 markdown text**, 3 markdown text  \n",
+                                  "text":"Chips 1",
                                   "image":{
                                      "src":{
                                         "rawUrl":"https://example.com/images/logo.png"
@@ -62,7 +62,7 @@ def webhook():
                                   "link":"https://example.com"
                                },
                                {
-                                  "text":"Chip 2",
+                                  "text":"Chips 2",
                                   "image":{
                                      "src":{
                                         "rawUrl":"https://example.com/images/logo.png"
