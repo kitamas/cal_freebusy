@@ -44,6 +44,38 @@ def webhook():
                     ]
                 }
             }]
-        }
+        },
+           "payload":{
+               "richContent":[
+                  [
+                     {
+                        "type":"chips",
+                        "options":[
+                           {
+                              "text":"Chip 1",
+                              "image":{
+                                 "src":{
+                                    "rawUrl":"https://example.com/images/logo.png"
+                                 }
+                              },
+                              "link":"https://example.com"
+                           },
+                           {
+                              "text":"Chip 2",
+                              "image":{
+                                 "src":{
+                                    "rawUrl":"https://example.com/images/logo.png"
+                                 }
+                              },
+                              "link":"https://example.com"
+                           }
+                        ]
+                     }
+                  ]
+               ]
+            }
+         }
+      ]
+    }
     }
     return res
