@@ -75,7 +75,7 @@ def webhook():
                                   "text":"AI csapat",
                                   "image":{
                                      "src":{
-                                        "rawUrl":"https://dev.da.tsmcloud.hu/var/www/images/icon1.png"
+                                        "rawUrl":"https://dev.da.tsmcloud.hu/images/icon1.png"
                                      }
                                   },
                                   "link":"https://dev.da.tsmcloud.hu/"
@@ -84,7 +84,7 @@ def webhook():
                                   "text":"Telekom",
                                   "image":{
                                      "src":{
-                                        "rawUrl":"https://dev.da.tsmcloud.hu/var/www/images/icon2.png"
+                                        "rawUrl":"https://dev.da.tsmcloud.hu/images/icon2.png"
                                      }
                                   },
                                   "link":"https://www.telekom.hu/"
