@@ -283,7 +283,7 @@ def webhook():
                    ]
                 }
              },
-    {
+        {
                 "text": {
                     "text": [
                         "Response facebook"
@@ -309,7 +309,8 @@ def webhook():
       }
     }
     }
-    }
+    },
+	"platform": "FACEBOOK"
     }			 
 			 
 			 
