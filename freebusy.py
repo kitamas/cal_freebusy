@@ -283,7 +283,7 @@ def webhook():
                    ]
                 }
              },
-        {
+    {
                 "text": {
                     "text": [
                         "Response facebook"
@@ -297,15 +297,21 @@ def webhook():
     "attachment": {
       "type": "template",
       "payload": {
-        "template_type": "button",
-        "buttons": [
+        "elements": [
           {
-            "title": "Text on the button",
-            "url": "https://www.example.com",
-            "type": "web_url"
+            "title": "More",
+            "buttons": [
+              {
+                "title": "more",
+                "payload": "more",
+                "type": "postback"
+              }
+            ],
+            "subtitle": "",
+            "image_url": "https://i.imgur.com/sI1VUsV.jpg"
           }
         ],
-        "text": "Required text"
+        "template_type": "generic"
       }
     }
     }
