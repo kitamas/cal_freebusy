@@ -46,15 +46,26 @@ def webhook():
                    ]
                 }
              },
-            {
-                "payload": {
-         "facebook": {
-          "text": "Hello, Facebook!"
-        }
-                },
-                "platform": "FACEBOOK"
-            }
-]
+             {
+                "payload":{
+  "template_type":"generic",
+  "elements":[
+     {
+      "title":"<TITLE_TEXT>",
+      "image_url":"<IMAGE_URL_TO_DISPLAY>",
+      "subtitle":"<SUBTITLE_TEXT>",
+      "default_action": {
+        "type": "web_url",
+        "url": "<DEFAULT_URL_TO_OPEN>",
+        "messenger_extensions": <TRUE | FALSE>,
+        "webview_height_ratio": "<COMPACT | TALL | FULL>"
+      },
+      "buttons":[<BUTTON_OBJECT>]      
+    }
+  ]
+                }
+             }	
+          ]
        }
     }
 
