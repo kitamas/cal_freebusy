@@ -522,18 +522,6 @@ def webhook():
              },
              {
                 "payload":{
-        "google": {
-          "expectUserResponse": true,
-          "richResponse": {
-            "items": [
-              {
-                "simpleResponse": {
-                  "textToSpeech": "this is a simple response"
-                }
-              }
-            ]
-          }
-        },
         "facebook": {
           "text": "Hello, Facebook!"
         }
