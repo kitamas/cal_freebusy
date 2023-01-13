@@ -42,7 +42,7 @@ def webhook():
              {
                 "text":{
                    "text":[
-                      "text"
+                      "messages text"
                    ]
                 }
              },
@@ -275,7 +275,15 @@ def webhook():
                       ]
                    ]
                 }
-             }
+             },
+             {
+                "payload":{
+        "facebook": {
+          "text": "Hello, Facebook!"
+        }
+
+                }
+             }	
           ]
        }
     }
