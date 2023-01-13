@@ -35,38 +35,26 @@ def webhook():
 
     text = "*1 markdown text*, **2 markdown text**, 3 markdown text  \n"
 
-
     res = {
        "fulfillment_response":{
           "messages":[
-             {
-                "text":{
-                   "text":[
-                      "messages text"
-                   ]
-                }
-             },
-             {
-                "payload":{
-    "template_type":"generic",
-    "elements":[
-     {
-      "title":"<TITLE_TEXT>",
-      "image_url":"<IMAGE_URL_TO_DISPLAY>",
-      "subtitle":"<SUBTITLE_TEXT>",
-      "default_action": {
-        "type": "web_url",
-        "url": "<DEFAULT_URL_TO_OPEN>",
-        "messenger_extensions": <TRUE | FALSE>,
-        "webview_height_ratio": "<COMPACT | TALL | FULL>"
-      },
-      "buttons":[<BUTTON_OBJECT>]      
-    }
-    ]
-                }
-             }	
+      {
+        "text": {
+          "text": [
+            "facebook text"
           ]
-       }
+        },
+        "platform": "FACEBOOK"
+      },
+      {
+        "text": {
+          "text": [
+            "Üdvözlöm Vanda vagyok! Miben segíthetek?"
+          ]
+        }
+      }
+          ]
+    }
     }
 
     return res
