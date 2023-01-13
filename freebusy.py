@@ -41,17 +41,24 @@ def webhook():
       {
         "text": {
           "text": [
-            "facebook text"
+            " *1 markdown text*, **2 markdown text**, 3 markdown text  \n Üdvözlöm Vanda vagyok! Miben segíthetek?"
           ]
         }
       },
+	               {
+                "payload":{    
+	  "facebook": {
+    "text": "Welcome to my agent!",
+    "quick_replies": [
       {
-        "text": {
-          "text": [
-            "Üdvözlöm Vanda vagyok! Miben segíthetek?"
-          ]
-        }
+        "title": "reply 1",
+        "content_type": "text",
+        "payload": "reply1"
       }
+    ]
+    }
+	}
+             }
           ]
     }
     }
