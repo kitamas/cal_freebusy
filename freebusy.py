@@ -48,8 +48,8 @@ def webhook():
              },
              {
                 "payload":{
-  "template_type":"generic",
-  "elements":[
+    "template_type":"generic",
+    "elements":[
      {
       "title":"<TITLE_TEXT>",
       "image_url":"<IMAGE_URL_TO_DISPLAY>",
@@ -62,7 +62,7 @@ def webhook():
       },
       "buttons":[<BUTTON_OBJECT>]      
     }
-  ]
+    ]
                 }
              }	
           ]
