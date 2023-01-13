@@ -38,6 +38,14 @@ def webhook():
     res = {
        "fulfillment_response":{
           "messages":[
+    {
+                "text": {
+                    "text": [
+                        "Response facebook"
+                    ]
+                },
+                "platform": "FACEBOOK"
+            },
              {
                 "text":{
                    "text":[
