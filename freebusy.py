@@ -35,6 +35,32 @@ def webhook():
 
     text = "*1 markdown text*, **2 markdown text**, 3 markdown text  \n"
 
+    res = {    
+    "facebook": {
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "elements": [
+          {
+            "title": "More",
+            "buttons": [
+              {
+                "title": "more",
+                "payload": "more",
+                "type": "postback"
+              }
+            ],
+            "subtitle": "",
+            "image_url": "https://i.imgur.com/sI1VUsV.jpg"
+          }
+        ],
+        "template_type": "generic"
+      }
+    }
+    }
+    }
+
+    """
     res = {
        "fulfillment_response":{
           "messages":[
@@ -62,6 +88,7 @@ def webhook():
           ]
     }
     }
+    """
 
     return res
 
