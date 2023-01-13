@@ -46,15 +46,15 @@ def webhook():
                    ]
                 }
              },
-             {
-                "payload":{
-        "facebook": {
+            {
+                "payload": {
+         "facebook": {
           "text": "Hello, Facebook!"
         }
-
-                }
-             }	
-          ]
+                },
+                "platform": "FACEBOOK"
+            }
+]
        }
     }
 
