@@ -276,6 +276,14 @@ def webhook():
                 }
              },
     {
+                "text": {
+                    "text": [
+                        "Response facebook"
+                    ]
+                },
+                "platform": "FACEBOOK"
+            },
+    {
                 "payload":{
     "facebook": {
     "attachment": {
