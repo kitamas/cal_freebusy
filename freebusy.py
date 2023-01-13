@@ -35,83 +35,61 @@ def webhook():
 
     text = "*1 markdown text*, **2 markdown text**, 3 markdown text  \n"
 
-    res = {    
-    "facebook":{
-    "attachment":{
-     "type":"template",
-     "payload":{
-        "template_type":"generic",
-        "elements":[
-           {
-              "title":"Welcome!",
-              "image_url":"https://upload.wikimedia.org/wikipedia/commons/7/70/Example.png",
-              "subtitle":"We have the right hat for everyone.",
-              "default_action":{
-                 "type":"web_url",
-                 "url":"https://www.google.com/",
-                 "webview_height_ratio":"tall"
-              },
-              "buttons":[
-                 {
-                    "type":"web_url",
-                    "url":"https://www.google.com/",
-                    "title":"View Website"
-                 },
-                 {
-                    "type":"postback",
-                    "title":"Start Chatting",
-                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                 }
-              ]
-           },
-               {
-              "title":"Welcome!",
-              "image_url":"https://upload.wikimedia.org/wikipedia/commons/7/70/Example.png",
-              "subtitle":"We have the right hat for everyone.",
-              "default_action":{
-                 "type":"web_url",
-                 "url":"https://www.google.com/",
-                 "webview_height_ratio":"tall"
-              },
-              "buttons":[
-                 {
-                    "type":"web_url",
-                    "url":"https://www.google.com/",
-                    "title":"View Website"
-                 },
-                 {
-                    "type":"postback",
-                    "title":"Start Chatting",
-                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                 }
-              ]
-           },
-               {
-              "title":"Welcome!",
-              "image_url":"https://upload.wikimedia.org/wikipedia/commons/7/70/Example.png",
-              "subtitle":"We have the right hat for everyone.",
-              "default_action":{
-                 "type":"web_url",
-                 "url":"https://www.google.com/",
-                 "webview_height_ratio":"tall"
-              },
-              "buttons":[
-                 {
-                    "type":"web_url",
-                    "url":"https://www.google.com/",
-                    "title":"View Website"
-                 },
-                 {
-                    "type":"postback",
-                    "title":"Start Chatting",
-                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                 }
-              ]
-           }
-        ]
-     }
+    res = {
+       "fulfillment_response":{
+          "messages":[
+             {
+                "text":{
+                   "text":[
+                      "text"
+                   ]
+                }
+             },
+             {
+                "payload":{
+                   "richContent":[
+                      [
+                         {
+                            "type":"info",
+                            "title":"Info item title, card clickable tts.mp3",
+                            "subtitle":"Info item subtitle, robot.mp3",
+                            "image":{
+                               "src":{
+                                  "rawUrl":"https://dev.da.tsmcloud.hu/images/robot_icon.png"
+                               }
+                            },
+                            "actionLink":"https://dev.da.tsmcloud.hu/mp3/tts.mp3"
+                         }
+                      ]
+                   ]
+                }
+             },
+             {
+                "payload":{
+    {
+    "facebook": {
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "template_type": "button",
+        "buttons": [
+          {
+            "title": "Text on the button",
+            "url": "https://www.example.com",
+            "type": "web_url"
+          }
+        ],
+        "text": "Required text"
+      }
     }
     }
+    }
+                }
+             }
+
+
+          ]
+       }
     }
 
     return res
