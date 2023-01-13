@@ -43,8 +43,7 @@ def webhook():
           "text": [
             "facebook text"
           ]
-        },
-        "platform": "FACEBOOK"
+        }
       },
       {
         "text": {
