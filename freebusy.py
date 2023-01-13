@@ -35,7 +35,7 @@ def webhook():
 
     text = "*1 markdown text*, **2 markdown text**, 3 markdown text  \n"
 
-    res = {
+        res = {
        "fulfillment_response":{
           "messages":[
              {
@@ -66,7 +66,25 @@ def webhook():
              },
              {
                 "payload":{
-    {
+                   "richContent":[
+                      [
+                         {
+                            "type":"info",
+                            "title":"Info item title, card clickable tts.mp3",
+                            "subtitle":"Info item subtitle, robot.mp3",
+                            "image":{
+                               "src":{
+                                  "rawUrl":"https://dev.da.tsmcloud.hu/images/robot_icon.png"
+                               }
+                            },
+                            "actionLink":"https://dev.da.tsmcloud.hu/mp3/tts.mp3"
+                         }
+                      ]
+                   ]
+                }
+             },
+             {
+                "payload":{
     "facebook": {
     "attachment": {
       "type": "template",
@@ -84,10 +102,7 @@ def webhook():
     }
     }
     }
-                }
-             }
-
-
+    }
           ]
        }
     }
