@@ -36,59 +36,83 @@ def webhook():
     text = "*1 markdown text*, **2 markdown text**, 3 markdown text  \n"
 
     res = {    
-    "facebook": {
-    "attachment": {
-      "type": "template",
-      "payload": {
-        "elements": [
-          {
-            "title": "More",
-            "buttons": [
-              {
-                "title": "more",
-                "payload": "more",
-                "type": "postback"
-              }
-            ],
-            "subtitle": "",
-            "image_url": "https://i.imgur.com/sI1VUsV.jpg"
-          }
-        ],
-        "template_type": "generic"
-      }
+    "facebook":{
+    "attachment":{
+     "type":"template",
+     "payload":{
+        "template_type":"generic",
+        "elements":[
+           {
+              "title":"Welcome!",
+              "image_url":"https://upload.wikimedia.org/wikipedia/commons/7/70/Example.png",
+              "subtitle":"We have the right hat for everyone.",
+              "default_action":{
+                 "type":"web_url",
+                 "url":"https://www.google.com/",
+                 "webview_height_ratio":"tall"
+              },
+              "buttons":[
+                 {
+                    "type":"web_url",
+                    "url":"https://www.google.com/",
+                    "title":"View Website"
+                 },
+                 {
+                    "type":"postback",
+                    "title":"Start Chatting",
+                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                 }
+              ]
+           },
+               {
+              "title":"Welcome!",
+              "image_url":"https://upload.wikimedia.org/wikipedia/commons/7/70/Example.png",
+              "subtitle":"We have the right hat for everyone.",
+              "default_action":{
+                 "type":"web_url",
+                 "url":"https://www.google.com/",
+                 "webview_height_ratio":"tall"
+              },
+              "buttons":[
+                 {
+                    "type":"web_url",
+                    "url":"https://www.google.com/",
+                    "title":"View Website"
+                 },
+                 {
+                    "type":"postback",
+                    "title":"Start Chatting",
+                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                 }
+              ]
+           },
+               {
+              "title":"Welcome!",
+              "image_url":"https://upload.wikimedia.org/wikipedia/commons/7/70/Example.png",
+              "subtitle":"We have the right hat for everyone.",
+              "default_action":{
+                 "type":"web_url",
+                 "url":"https://www.google.com/",
+                 "webview_height_ratio":"tall"
+              },
+              "buttons":[
+                 {
+                    "type":"web_url",
+                    "url":"https://www.google.com/",
+                    "title":"View Website"
+                 },
+                 {
+                    "type":"postback",
+                    "title":"Start Chatting",
+                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                 }
+              ]
+           }
+        ]
+     }
     }
     }
     }
-
-    """
-    res = {
-       "fulfillment_response":{
-          "messages":[
-      {
-        "text": {
-          "text": [
-            " break  \n Üdv Vanda vagyok! Miben segíthetek? *1 mdwn*, **2 mdwn**, _3 mdwn_"
-          ]
-        }
-      },
-	               {
-                "payload":{    
-	  "facebook": {
-    "text": "Welcome to my agent!",
-    "quick_replies": [
-      {
-        "title": "reply 1",
-        "content_type": "text",
-        "payload": "reply1"
-      }
-    ]
-    }
-	}
-             }
-          ]
-    }
-    }
-    """
 
     return res
 
