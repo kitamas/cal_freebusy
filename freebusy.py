@@ -47,22 +47,18 @@ def webhook():
              },
              {
                 "payload":{
-    "facebook": {
-    "attachment": {
-      "type": "template",
-      "payload": {
-        "template_type": "button",
-        "buttons": [
-          {
-            "title": "Text on the button",
-            "url": "https://www.example.com",
-            "type": "web_url"
-          }
-        ],
-        "text": "Required text"
-      }
+    "text": "Pick a color:",
+    "quick_replies":[
+    {
+      "content_type":"text",
+      "title":"Red",
+      "payload":"Red color"
+    },{
+      "content_type":"text",
+      "title":"Green",
+      "payload":"Green color"
     }
-    }
+    ]
                 }
              }
           ]
