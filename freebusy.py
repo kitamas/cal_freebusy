@@ -59,7 +59,6 @@ def webhook():
       "payload":"Green color"
     }
     ],
-	    "attachment": {
       "type": "template",
       "payload": {
         "elements": [
@@ -78,12 +77,11 @@ def webhook():
         ],
         "template_type": "generic"
       }
-    }
                 }
              }
           ]
        }
-    }  
+    }   
 
     """
     res = {
