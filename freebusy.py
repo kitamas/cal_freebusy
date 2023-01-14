@@ -64,9 +64,18 @@ def webhook():
              },
              {
                 "payload":{
-
+    "facebook": {
+    "text": "Welcome to my agent!",
+    "quick_replies": [
+      {
+        "title": "reply 1",
+        "content_type": "text",
+        "payload": "reply1"
+      }
+    ]
+    }
                 }
-             },
+             }
           ]
        }
     }
