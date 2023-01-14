@@ -52,8 +52,8 @@ def webhook():
                       {
                          "content_type":"text",
                          "title":"Red",
+                         "payload":"Red color",
                          "image_url":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
-                         "payload":"Red color"
                       },
                       {
                          "content_type":"text",
