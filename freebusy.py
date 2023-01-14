@@ -52,7 +52,8 @@ def webhook():
     {
       "content_type":"text",
       "title":"Red",
-      "payload":"Red color"
+      "payload":"Red color",
+      "image_url":"https://dev.da.tsmcloud.hu/images/icon1.png"
     },{
       "content_type":"text",
       "title":"Green",
