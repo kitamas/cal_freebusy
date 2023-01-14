@@ -47,21 +47,23 @@ def webhook():
              },
              {
                 "payload":{
-                   "text":"Pick a color:",
-                   "quick_replies":[
-                      {
-                         "content_type":"text",
-                         "title":"Red",
-                         "payload":"Red color",
-                         "image_url":" https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
-                      },
-                      {
-                         "content_type":"text",
-                         "title":"Green",
-                         "payload":"Green color"
-                      }
-                   ]
-                }
+    {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"Try the URL button!",
+        "buttons":[
+          {
+            "type":"web_url",
+            "url":"https://www.messenger.com/",
+            "title":"URL Button",
+            "webview_height_ratio": "full"
+          }
+        ]
+      }
+    }
+
              }
           ]
        }
