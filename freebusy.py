@@ -87,31 +87,7 @@ def webhook():
                                   "link":"https://www.telekom.hu/"
                                }
                             ]
-                         },
-						 {
-    "facebook": {
-    "attachment": {
-      "type": "template",
-      "payload": {
-        "elements": [
-          {
-            "title": "More",
-            "buttons": [
-              {
-                "title": "more",
-                "payload": "more",
-                "type": "postback"
-              }
-            ],
-            "subtitle": "",
-            "image_url": "https://i.imgur.com/sI1VUsV.jpg"
-          }
-        ],
-        "template_type": "generic"
-      }
-    }
-    }
-    }
+                         }
                       ]
                    ]
                 }
