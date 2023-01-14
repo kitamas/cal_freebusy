@@ -50,7 +50,7 @@ def webhook():
    "attachment": {
     "type": "image",
     "payload": {
-      "url": "https://example.com/test.jpg"
+      "url": "https://dev.da.tsmcloud.hu/images/robot_icon.png"
     }
     }
     },
