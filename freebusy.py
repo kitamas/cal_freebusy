@@ -47,14 +47,6 @@ def webhook():
         "platform": "FACEBOOK"
       },
       {
-        "text": {
-          "text": [
-            "facebook text"
-          ]
-        },
-        "platform": "FACEBOOK"
-      },
-      {
         "card": {
           "title": "card title",
           "subtitle": "subtitle",
@@ -73,13 +65,30 @@ def webhook():
         },
         "platform": "FACEBOOK"
       },
-      {
-        "text": {
-          "text": [
-            "Üdvözlöm Vanda vagyok! Miben segíthetek?"
-          ]
-        }
+    {
+    "facebook": {
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "elements": [
+          {
+            "title": "More",
+            "buttons": [
+              {
+                "title": "more",
+                "payload": "more",
+                "type": "postback"
+              }
+            ],
+            "subtitle": "",
+            "image_url": "https://i.imgur.com/sI1VUsV.jpg"
+          }
+        ],
+        "template_type": "generic"
       }
+    }
+    }
+    }
     ]
        }
     }
