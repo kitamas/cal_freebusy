@@ -50,22 +50,6 @@ def webhook():
                    "richContent":[
                       [
                          {
-                            "title":"Description title",
-                            "type":"description",
-                            "text":[
-                               "This is text line 1",
-                               "This is text line 2"
-                            ]
-                         },
-						 {
-                            "title":"Description title",
-                            "type":"description",
-                            "text":[
-                               "This is text line 1",
-                               "This is text line 2"
-                            ]
-                         },
-						 {
                             "type":"chips",
                             "options":[
                                {
@@ -88,6 +72,118 @@ def webhook():
                                }
                             ]
                          }
+                      ],
+                      [
+                         {
+                            "type":"info",
+                            "title":"Info item title, card clickable tts.mp3",
+                            "subtitle":"Info item subtitle, robot.mp3",
+                            "image":{
+                               "src":{
+                                  "rawUrl":"https://dev.da.tsmcloud.hu/images/robot_icon.png"
+                               }
+                            },
+                            "actionLink":"https://dev.da.tsmcloud.hu/mp3/tts.mp3"
+                         }
+                      ],
+                      [
+                         {
+                            "type":"description",
+                            "title":"Description title",
+                            "text":[
+                               "This is text line 1",
+                               "This is text line 2"
+                            ]
+                         }
+                      ],
+                      [
+                         {
+                            "type":"image",
+                            "accessibilityText":"image",
+                            "rawUrl":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
+                         }
+                      ],
+    [
+      {
+        "type": "button",
+        "icon": {
+          "type": "chevron_right",
+          "color": "#FF9800"
+        },
+        "text": "Button text",
+        "link": "https://example.com",
+        "event": {
+          "name": ""
+        }
+      }
+    ],
+                      [
+                         {
+                            "type":"chips",
+                            "options":[
+                               {
+                                  "text":"robot",
+                                  "image":{
+                                     "src":{
+                                        "rawUrl":"https://dev.da.tsmcloud.hu/images/robot_icon.png"
+                                     }
+                                  },
+                                  "link":"https://dev.da.tsmcloud.hu/mp3/robot.mp3"
+                               },
+                               {
+                                  "text":"yes",
+                                  "image":{
+                                     "src":{
+                                        "rawUrl":"https://dev.da.tsmcloud.hu/images/yes.png"
+                                     }
+                                  },
+                                  "link":"https://cloud.google.com/dialogflow/case-studies"
+                               },
+                               {
+                                  "text":"no",
+                                  "image":{
+                                     "src":{
+                                        "rawUrl":"https://dev.da.tsmcloud.hu/images/no.png"
+                                     }
+                                  },
+                                  "link":"https://cloud.google.com/dialogflow/docs"
+                               }
+                            ]
+                         }
+                      ],
+    [
+      {
+        "type": "list",
+        "title": "List item 1 title",
+        "subtitle": "List item 1 subtitle",
+        "event": {
+          "name": ""
+        }
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "list",
+        "title": "List item 2 title",
+        "subtitle": "List item 2 subtitle",
+        "event": {
+          "name": ""
+        }
+      }
+    ],
+                      [
+                         {
+                            "type":"accordion",
+                            "title":"accordion title",
+                            "subtitle":"accordion subtitle",							
+                            "text":"Lorem <img src=\"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg\" width=\"38\"><a target=\"_blank\" href=\"https://moodle.org\">Moodle link</a> ipsum dolor sit amet.",
+                            "image":{
+                               "src":{
+                                  "rawUrl":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
+                               }
+                            }
+                         }
                       ]
                    ]
                 }
@@ -95,6 +191,7 @@ def webhook():
           ]
        }
     }
+    
 
     return res
 
