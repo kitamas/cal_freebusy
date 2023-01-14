@@ -38,34 +38,82 @@ def webhook():
     res = {
        "fulfillment_response":{
           "messages":[
-    {
-                "text": {
-                    "text": [
-                        "Response facebook"
-                    ]
-                },
-                "platform": "FACEBOOK"
-            },
-    {
-   "attachment": {
-    "type": "image",
-    "payload": {
-      "url": "https://dev.da.tsmcloud.hu/images/robot_icon.png"
-    }
-    }
-    },
+             {
+                "text":{
+                   "text":[
+                      "text"
+                   ]
+                }
+             },
              {
                 "payload":{
+                   "richContent":[
+                      [
+                         {
+                            "title":"Description title",
+                            "type":"description",
+                            "text":[
+                               "This is text line 1",
+                               "This is text line 2"
+                            ]
+                         },
+						 {
+                            "title":"Description title",
+                            "type":"description",
+                            "text":[
+                               "This is text line 1",
+                               "This is text line 2"
+                            ]
+                         },
+						 {
+                            "type":"chips",
+                            "options":[
+                               {
+                                  "text":"AI csapat",
+                                  "image":{
+                                     "src":{
+                                        "rawUrl":"https://dev.da.tsmcloud.hu/images/icon1.png"
+                                     }
+                                  },
+                                  "link":"https://dev.da.tsmcloud.hu/"
+                               },
+                               {
+                                  "text":"Telekom",
+                                  "image":{
+                                     "src":{
+                                        "rawUrl":"https://dev.da.tsmcloud.hu/images/icon2.png"
+                                     }
+                                  },
+                                  "link":"https://www.telekom.hu/"
+                               }
+                            ]
+                         },
+						 {
     "facebook": {
-    "text": "Welcome to my agent!",
-    "quick_replies": [
-      {
-        "title": "reply 1",
-        "content_type": "text",
-        "payload": "reply1"
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "elements": [
+          {
+            "title": "More",
+            "buttons": [
+              {
+                "title": "more",
+                "payload": "more",
+                "type": "postback"
+              }
+            ],
+            "subtitle": "",
+            "image_url": "https://i.imgur.com/sI1VUsV.jpg"
+          }
+        ],
+        "template_type": "generic"
       }
-    ]
     }
+    }
+    }
+                      ]
+                   ]
                 }
              }
           ]
