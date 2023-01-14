@@ -46,22 +46,14 @@ def webhook():
                 },
                 "platform": "FACEBOOK"
             },
-             {
-                "payload":{
-                   "richContent":[
-                      [
-                         {
-                            "type":"chips",
-                            "options":[
-                               {
-                                  "text":"Start over"
-                               }
-                            ]
-                         }
-                      ]
-                   ]
-                }
-             },
+    {
+   "attachment": {
+    "type": "image",
+    "payload": {
+      "url": "https://example.com/test.jpg"
+    }
+    }
+    },
              {
                 "payload":{
     "facebook": {
