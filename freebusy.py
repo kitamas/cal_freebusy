@@ -47,30 +47,17 @@ def webhook():
              },
              {
                 "payload":{
-    "text": "Pick a color:",
     "attachment": {
     "type": "image",
     "payload": {
       "url": "https://dev.da.tsmcloud.hu/images/icon1.png"
     }
-    },
-    "quick_replies":[
-    {
-      "content_type":"text",
-      "title":"Red",
-      "payload":"Red color"
-    },{
-      "content_type":"text",
-      "title":"Green",
-      "payload":"Green color"
     }
-    ]
                 }
              }
           ]
        }
     } 
-	 
 
     """
     res = {
