@@ -38,135 +38,15 @@ def webhook():
     res = {
        "fulfillment_response":{
               "messages": [
-      {
-        "text": {
-          "text": [
-            "Üdvözlöm Vanda vagyok! Miben segíthetek?"
-          ]
-        },
-        "platform": "FACEBOOK"
-      },
-      {
-        "card": {
-          "title": "card title",
-          "subtitle": "subtitle",
-          "imageUri": "https://dev.da.tsmcloud.hu/images/robot_icon.png",
-          "buttons": [
-            {
-              "text": "button title"
-            }
-          ]
-        },
-        "platform": "FACEBOOK"
-      },
-      {
-        "quickReplies": {
-          "title": "quick 1"
-        },
-        "platform": "FACEBOOK"
-      },
-{
- "facebook":{
-  "attachment":{
-     "type":"template",
-     "payload":{
-        "template_type":"generic",
-        "elements":[
-           {
-              "title":"Welcome!",
-              "image_url":"https://upload.wikimedia.org/wikipedia/commons/7/70/Example.png",
-              "subtitle":"We have the right hat for everyone.",
-              "default_action":{
-                 "type":"web_url",
-                 "url":"https://www.google.com/",
-                 "webview_height_ratio":"tall"
-              },
-              "buttons":[
-                 {
-                    "type":"web_url",
-                    "url":"https://www.google.com/",
-                    "title":"View Website"
-                 },
-                 {
-                    "type":"postback",
-                    "title":"Start Chatting",
-                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                 }
-              ]
-           },
-               {
-              "title":"Welcome!",
-              "image_url":"https://upload.wikimedia.org/wikipedia/commons/7/70/Example.png",
-              "subtitle":"We have the right hat for everyone.",
-              "default_action":{
-                 "type":"web_url",
-                 "url":"https://www.google.com/",
-                 "webview_height_ratio":"tall"
-              },
-              "buttons":[
-                 {
-                    "type":"web_url",
-                    "url":"https://www.google.com/",
-                    "title":"View Website"
-                 },
-                 {
-                    "type":"postback",
-                    "title":"Start Chatting",
-                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                 }
-              ]
-           },
-               {
-              "title":"Welcome!",
-              "image_url":"https://upload.wikimedia.org/wikipedia/commons/7/70/Example.png",
-              "subtitle":"We have the right hat for everyone.",
-              "default_action":{
-                 "type":"web_url",
-                 "url":"https://www.google.com/",
-                 "webview_height_ratio":"tall"
-              },
-              "buttons":[
-                 {
-                    "type":"web_url",
-                    "url":"https://www.google.com/",
-                    "title":"View Website"
-                 },
-                 {
-                    "type":"postback",
-                    "title":"Start Chatting",
-                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                 }
-              ]
-           }
-        ]
-     }
-     }
-     }
-     },
     {
     "facebook": {
-    "attachment": {
-      "type": "template",
-      "payload": {
-        "elements": [
-          {
-            "title": "More",
-            "buttons": [
-              {
-                "title": "more",
-                "payload": "more",
-                "type": "postback"
-              }
-            ],
-            "subtitle": "",
-            "image_url": "https://i.imgur.com/sI1VUsV.jpg"
-          }
-        ],
-        "template_type": "generic"
-      }
+    "quick_replies": [
+    {
+    "content_type":"user_email"
     }
-    },
-        "platform": "FACEBOOK"
+    ],
+    "text": "What's your email?"
+    }
     }
     ]
        }
