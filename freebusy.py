@@ -33,8 +33,37 @@ def favicon():
 @ app.route('/webhook', methods = ['GET', 'POST'])
 def webhook():
 
-    text = "*1 markdown text*, **2 markdown text**, 3 markdown text  \n"
+    text = "*1 marqqqqkdown text*, **2 markdown text**, 3 markdown text  \n"
 
+    res = {
+       "fulfillment_response":{
+          "messages":[
+             {
+                "text":{
+                   "text":[
+                      text
+                   ]
+                }
+             },
+             {
+                "payload":{
+    "facebook": {
+    "text": "Welcome to my agent!",
+    "quick_replies": [
+      {
+        "title": "reply 1",
+        "content_type": "text",
+        "payload": "reply1"
+      }
+    ]
+    }
+                }
+             }
+          ]
+       }
+    } 
+
+    """
     res = {
        "fulfillment_response":{
           "messages":[
@@ -191,7 +220,7 @@ def webhook():
           ]
        }
     } 
-    
+    """
 
     
 
