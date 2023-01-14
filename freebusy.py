@@ -64,44 +64,9 @@ def webhook():
              },
              {
                 "payload":{
-    {
-    "facebook": {
-    "attachment": {
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements":[
-           {
-            "title":"Your first payload",
-            "image_url":"https://i.imgur.com/MgSrTnB.gif",
-            "subtitle":"you are welcome.",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.google.com"
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://telegram.org/",
-                "title":"button 1"
-              },{
-                "type":"web_url",
-                "url":"https://medium.com",
-              "title":"button 2"
-              },{
-                "type":"web_url",
-                "url":"https://emojipedia.org",
-                "title":"button 3"
-              }              
-            ]      
-          }
-        ]
-      }
-    }
-    }
-    }
+
                 }
-             }	 
+             },
           ]
        }
     }
