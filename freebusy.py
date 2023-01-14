@@ -37,7 +37,7 @@ def webhook():
 
     res = {
        "fulfillment_response":{
-              "messages": [
+              "message": [
     {
     "facebook": {
     "quick_replies": [
