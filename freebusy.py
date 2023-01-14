@@ -48,6 +48,12 @@ def webhook():
              {
                 "payload":{
     "text": "Pick a color:",
+	  "attachment": {
+    "type": "image",
+    "payload": {
+      "url": "https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
+    }
+    },
     "quick_replies":[
     {
       "content_type":"text",
