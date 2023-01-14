@@ -35,7 +35,7 @@ def webhook():
 
     text = "*1 mdw*, **2 mdw**,  \n _3mdw_"
 
-      res = {
+    res = {
        "fulfillment_response":{
           "messages":[
              {
@@ -47,40 +47,25 @@ def webhook():
              },
              {
                 "payload":{
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements":[
-           {
-            "title":"Welcome!",
-            "image_url":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg",
-            "subtitle":"We have the right hat for everyone.",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.originalcoastclothing.com/",
-              "webview_height_ratio": "tall"
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.originalcoastclothing.com/",
-                "title":"View Website"
-              },{
-                "type":"postback",
-                "title":"Start Chatting",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
-              }              
-            ]      
-          }
-        ]
-      }
-    }
+                   "text":"Pick a color:",
+                   "quick_replies":[
+                      {
+                         "content_type":"text",
+                         "title":"Red",
+                         "image_url":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
+                         "payload":"Red color"
+                      },
+                      {
+                         "content_type":"text",
+                         "title":"Green",
+                         "payload":"Green color"
+                      }
+                   ]
                 }
              }
           ]
        }
-    }
+    } 
 
 
 
