@@ -87,7 +87,8 @@ def webhook():
         "template_type": "generic"
       }
     }
-    }
+    },
+        "platform": "FACEBOOK"
     }
     ]
        }
