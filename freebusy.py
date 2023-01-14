@@ -37,20 +37,75 @@ def webhook():
 
     res = {
        "fulfillment_response":{
-              "message": [
+          "messages":[
+    {
+                "text": {
+                    "text": [
+                        "Response facebook"
+                    ]
+                },
+                "platform": "FACEBOOK"
+            },
+             {
+                "payload":{
+                   "richContent":[
+                      [
+                         {
+                            "type":"chips",
+                            "options":[
+                               {
+                                  "text":"Start over"
+                               }
+                            ]
+                         }
+                      ]
+                   ]
+                }
+             },
+             {
+                "payload":{
     {
     "facebook": {
-    "quick_replies": [
-    {
-    "content_type":"user_email"
+    "attachment": {
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements":[
+           {
+            "title":"Your first payload",
+            "image_url":"https://i.imgur.com/MgSrTnB.gif",
+            "subtitle":"you are welcome.",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.google.com"
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://telegram.org/",
+                "title":"button 1"
+              },{
+                "type":"web_url",
+                "url":"https://medium.com",
+              "title":"button 2"
+              },{
+                "type":"web_url",
+                "url":"https://emojipedia.org",
+                "title":"button 3"
+              }              
+            ]      
+          }
+        ]
+      }
     }
-    ],
-    "text": "What's your email?"
     }
     }
-    ]
+                }
+             }	 
+          ]
        }
     }
+
     return res
 
     app.run()
