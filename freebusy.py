@@ -47,6 +47,7 @@ def webhook():
              },
              {
                 "payload":{
+				  "facebook": {
     "text": "Pick a color:",
     "quick_replies":[
     {
@@ -59,7 +60,8 @@ def webhook():
       "payload":"Green color"
     }
     ]
-                }
+    }
+    }
              }
           ]
        }
