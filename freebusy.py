@@ -48,12 +48,10 @@ def webhook():
              {
                 "payload":{
     "text": "Pick a color:",
-    {
     "attachment": {
     "type": "image",
     "payload": {
       "url": "https://dev.da.tsmcloud.hu/images/icon1.png"
-    }
     }
     },
     "quick_replies":[
