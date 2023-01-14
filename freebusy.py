@@ -48,6 +48,14 @@ def webhook():
              {
                 "payload":{
     "text": "Pick a color:",
+    {
+    "attachment": {
+    "type": "image",
+    "payload": {
+      "url": "https://dev.da.tsmcloud.hu/images/icon1.png"
+    }
+   }
+    },
     "quick_replies":[
     {
       "content_type":"text",
@@ -58,17 +66,7 @@ def webhook():
       "title":"Green",
       "payload":"Green color"
     }
-    ],
-	            "title": "More",
-            "buttons": [
-              {
-                "title": "more",
-                "payload": "more",
-                "type": "postback"
-              }
-            ],
-            "subtitle": "",
-            "image_url": "https://i.imgur.com/sI1VUsV.jpg"
+    ]
                 }
              }
           ]
