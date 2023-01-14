@@ -47,7 +47,6 @@ def webhook():
              },
              {
                 "payload":{
-    {
     "attachment":{
       "type":"template",
       "payload":{
