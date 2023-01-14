@@ -48,17 +48,23 @@ def webhook():
              {
                 "payload":{
     "facebook": {
-    "text": "Welcome to my agent!",
-    "quick_replies": [
-      {
-        "title": "reply 1",
-        "content_type": "text",
-        "payload": "reply1"
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "template_type": "button",
+        "buttons": [
+          {
+            "title": "Text on the button",
+            "url": "https://www.example.com",
+            "type": "web_url"
+          }
+        ],
+        "text": "Required text"
       }
-    ]
+    }
     }
                 }
-             }	
+             }
           ]
        }
     } 
