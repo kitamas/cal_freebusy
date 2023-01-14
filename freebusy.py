@@ -59,11 +59,7 @@ def webhook():
       "payload":"Green color"
     }
     ],
-      "type": "template",
-      "payload": {
-        "elements": [
-          {
-            "title": "More",
+	            "title": "More",
             "buttons": [
               {
                 "title": "more",
@@ -73,15 +69,12 @@ def webhook():
             ],
             "subtitle": "",
             "image_url": "https://i.imgur.com/sI1VUsV.jpg"
-          }
-        ],
-        "template_type": "generic"
-      }
                 }
              }
           ]
        }
-    }   
+    } 
+	 
 
     """
     res = {
