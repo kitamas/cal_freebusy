@@ -35,13 +35,13 @@ def webhook():
 
     text = "*1 markdown text*, **2 markdown text**, 3 markdown text  \n"
 
-    res = {
+res = {
        "fulfillment_response":{
           "messages":[
              {
                 "text":{
                    "text":[
-                      "text"
+                      text
                    ]
                 }
              },
@@ -103,20 +103,20 @@ def webhook():
                             "rawUrl":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
                          }
                       ],
-    [
-      {
-        "type": "button",
-        "icon": {
-          "type": "chevron_right",
-          "color": "#FF9800"
-        },
-        "text": "Button text",
-        "link": "https://example.com",
-        "event": {
-          "name": ""
-        }
-      }
-    ],
+                      [
+                         {
+                            "type":"button",
+                            "icon":{
+                               "type":"chevron_right",
+                               "color":"#FF9800"
+                            },
+                            "text":"Button text",
+                            "link":"https://example.com",
+                            "event":{
+                               "name":""
+                            }
+                         }
+                      ],
                       [
                          {
                             "type":"chips",
@@ -151,33 +151,33 @@ def webhook():
                             ]
                          }
                       ],
-    [
-      {
-        "type": "list",
-        "title": "List item 1 title",
-        "subtitle": "List item 1 subtitle",
-        "event": {
-          "name": ""
-        }
-      },
-      {
-        "type": "divider"
-      },
-      {
-        "type": "list",
-        "title": "List item 2 title",
-        "subtitle": "List item 2 subtitle",
-        "event": {
-          "name": ""
-        }
-      }
-    ],
+                      [
+                         {
+                            "type":"list",
+                            "title":"List item 1 title",
+                            "subtitle":"List item 1 subtitle",
+                            "event":{
+                               "name":""
+                            }
+                         },
+                         {
+                            "type":"divider"
+                         },
+                         {
+                            "type":"list",
+                            "title":"List item 2 title",
+                            "subtitle":"List item 2 subtitle",
+                            "event":{
+                               "name":""
+                            }
+                         }
+                      ],
                       [
                          {
                             "type":"accordion",
                             "title":"accordion title",
-                            "subtitle":"accordion subtitle",							
-                            "text":"Lorem <img src=\"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg\" width=\"38\"><a target=\"_blank\" href=\"https://moodle.org\">Moodle link</a> ipsum dolor sit amet.",
+                            "subtitle":"accordion subtitle",
+                            "text":"Lorem <img src=\"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg\" width=\"38\"><a target=\"_blank\" href=\"https://dev.da.tsmcloud.hu/apisandbox.html\">DEV link</a> ipsum dolor sit amet.",
                             "image":{
                                "src":{
                                   "rawUrl":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
@@ -190,7 +190,9 @@ def webhook():
              }
           ]
        }
-    }
+    } 
+    
+
     
 
     return res
