@@ -52,7 +52,7 @@ def webhook():
       "type":"image", 
       "payload":{
         "url":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg", 
-        "is_reusable":true
+        "is_reusable":"true"
       }
     }
     }
