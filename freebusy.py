@@ -47,13 +47,41 @@ def webhook():
              },
              {
                 "payload":{
+    {
+    "attachment":{
+      "type":"image", 
+      "payload":{
+        "url":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg", 
+        "is_reusable":true
+      }
+    }
+    }
+                }
+             }
+          ]
+       }
+    } 
+
+    """
+    res = {
+       "fulfillment_response":{
+          "messages":[
+             {
+                "text":{
+                   "text":[
+                      text
+                   ]
+                }
+             },
+             {
+                "payload":{
                    "text":"Pick a color:",
                    "quick_replies":[
                       {
                          "content_type":"text",
                          "title":"Red",
                          "payload":"Red color",
-                         "image_url":" https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
+                         "image_url":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
                       },
                       {
                          "content_type":"text",
@@ -67,6 +95,7 @@ def webhook():
        }
     } 
 
+    """
 
 
 
