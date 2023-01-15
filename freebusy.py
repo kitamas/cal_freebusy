@@ -33,11 +33,7 @@ def favicon():
 @ app.route('/webhook', methods = ['GET', 'POST'])
 def webhook():
 
-    text = "*1 mdw*, **2 mdw**,  \n _3mdw_,
-    *   Candy.
-    *   Gum.
-    *   Booze."
-
+    text = "*1 mdw*, **2 mdw**,  \n _3mdw_ "
 
     res = {
        "fulfillment_response":{
