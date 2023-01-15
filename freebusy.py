@@ -34,7 +34,7 @@ def favicon():
 def webhook():
 
     text = "*1 mdw*, **2 mdw**,  \n _3mdw_"
-
+    true = "true"
     res = {
        "fulfillment_response":{
           "messages":[
@@ -50,7 +50,8 @@ def webhook():
     "attachment":{
       "type":"image", 
       "payload":{
-        "url":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
+        "url":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg",
+        "is_reusable":true
       }
     }
     }
