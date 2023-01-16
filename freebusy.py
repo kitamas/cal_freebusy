@@ -118,6 +118,16 @@ def webhook():
                                   }
                                ]
                             }							
+                         ],
+						 "template_type":"button",
+                         "text":"Try the URL button!",
+                         "buttons":[
+                            {
+                               "type":"web_url",
+                               "url":"https://www.messenger.com/",
+                               "title":"URL Button",
+                               "webview_height_ratio":"full"
+                            }
                          ]
                       }
                    }
