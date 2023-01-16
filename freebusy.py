@@ -47,6 +47,100 @@ def webhook():
              },
              {
                 "payload":{
+                   test_carousel = {
+        "attachment":
+        {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [
+                    {
+                        "title": "Title",
+                         "subtitle": "subtitle",
+                        "image_url": "url of the image",
+
+                        "buttons": [
+                            {
+                                "title": "visit",
+                                "url": "webpage url to open",
+                                "type": "web_url"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Title",
+                         "subtitle": "subtitle",
+                        "image_url": "url of the image",
+
+                        "buttons": [
+                            {
+                                "title": "Title",
+                                "url": "webpage url to open",
+                                "type": "web_url"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Title",
+                         "subtitle": "subtitle",
+                        "image_url": "url of the image",
+
+                        "buttons": [
+                            {
+                                "title": "Title",
+                                "url": "webpage url to open",
+                                "type": "web_url"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Title",
+                        "subtitle": "subtitle",
+                        "image_url": "url of the image",
+                        "buttons": [
+                            {
+                                "title": "Title",
+                                "url": "webpage url to open",
+                                "type": "web_url"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Title",
+                        "subtitle": "subtitle",
+                        "image_url": "url of the image",
+
+                        "buttons": [
+                            {
+                                "title": "Title",
+                                "url": "webpage url to open",
+                                "type": "web_url"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+             }
+          ]
+       }
+    } 
+
+
+    """
+    res = {
+       "fulfillment_response":{
+          "messages":[
+             {
+                "text":{
+                   "text":[
+                      "text"
+                   ]
+                }
+             },
+             {
+                "payload":{
                    "attachment":{
                       "type":"template",
                       "payload":{
@@ -82,7 +176,7 @@ def webhook():
           ]
        }
     }
-
+    """
          
     
     """
