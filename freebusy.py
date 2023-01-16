@@ -55,7 +55,7 @@ def webhook():
         "elements":[
            {
             "title":"Welcome!",
-            "image_url":"https://petersfancybrownhats.com/company_image.png",
+            "image_url":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg",
             "subtitle":"We have the right hat for everyone.",
             "default_action": {
               "type": "web_url",
@@ -82,7 +82,7 @@ def webhook():
                          "content_type":"text",
                          "title":"Red",
                          "payload":"Red color",
-    "image_url":" https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
+    "image_url":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
                       },
                       {
                          "content_type":"text",
