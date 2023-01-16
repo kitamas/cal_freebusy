@@ -47,7 +47,6 @@ def webhook():
              },
              {
                 "payload":{
-                   test_carousel = {
         "attachment":
         {
             "type": "template",
