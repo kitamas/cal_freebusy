@@ -33,9 +33,42 @@ def favicon():
 @ app.route('/webhook', methods = ['GET', 'POST'])
 def webhook():
 
-    text = " *bold*  \n **mdw** _italic_ [link](https://facebook.com) 1. item 2. item *1. item *2. item -1. item"
+    text = " *bold*  \n **mdw** _italic_ [link](https://facebook.com) "
 
+   res = {
+       "fulfillment_response":{
+          "messages":[
+             {
+                "text":{
+                   "text":[
+                      text
+                   ]
+                }
+             },
+             {
+                "payload":{
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"Try the URL button!",
+        "buttons":[
+          {
+            "type":"web_url",
+            "url":"https://www.messenger.com/",
+            "title":"URL Button",
+            "webview_height_ratio": "full"
+          }
+        ]
+      }
+    }
+                }
+             }
+          ]
+       }
+    }
 
+    """
     res = {
        "fulfillment_response":{
           "messages":[
@@ -67,7 +100,7 @@ def webhook():
           ]
        }
     } 
-
+    """
 
 
     """
