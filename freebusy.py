@@ -47,7 +47,7 @@ def webhook():
              },
              {
                 "payload":{
-    "attachment":{
+                       "attachment":{
       "type":"template",
       "payload":{
         "template_type":"receipt",
@@ -105,6 +105,8 @@ def webhook():
           ]
        }
     } 
+
+
 
      
     
