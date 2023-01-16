@@ -41,53 +41,56 @@ def webhook():
              {
                 "text":{
                    "text":[
-                      text
+                      "text"
                    ]
                 }
              },
              {
                 "payload":{
-    "type": "vertical",
-    "tag": "button",
-    "elements": [
-    {
-      "type": "vertical",
-      "elements": [
-        {
-          "type": "text",
-          "tag": "title",
-          "text": "Button example template",
-          "tooltip": "Button example template"
-        },
-        {
-          "type": "button",
-          "tooltip": "Publish text example",
-          "title": "Publish text example",
-          "click": {
-            "actions": [
+                   "text":"Pick a color:",
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements":[
+           {
+            "title":"Welcome!",
+            "image_url":"https://petersfancybrownhats.com/company_image.png",
+            "subtitle":"We have the right hat for everyone.",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://petersfancybrownhats.com/view?item=103",
+              "webview_height_ratio": "tall"
+            },
+            "buttons":[
               {
-                "type": "publishText",
-                "text": "published text button tap"
-              }
-            ]
+                "type":"web_url",
+                "url":"https://petersfancybrownhats.com",
+                "title":"View Website"
+              },{
+                "type":"postback",
+                "title":"Start Chatting",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+              }              
+            ]      
           }
-        },
-        {
-          "type": "button",
-          "tooltip": "URL button example",
-          "title": "URL button example",
-          "click": {
-            "actions": [
-              {
-                "type": "link",
-                "name": "URL button tap",
-                "uri": "https://www.apple.com/iphone-8/specs/"
-              }
-            ]
-          }
-        }
-      ]
-    }]                   
+        ]
+      }
+    },
+    "quick_replies":[
+                      {
+                         "content_type":"text",
+                         "title":"Red",
+                         "payload":"Red color",
+    "image_url":" https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
+                      },
+                      {
+                         "content_type":"text",
+                         "title":"Green",
+                         "payload":"Green color"
+                      }
+                   ]
+                }
              }
           ]
        }
