@@ -48,32 +48,21 @@ def webhook():
              {
                 "payload":{
     "type": "vertical",
-    "tag": "generic",
+    "tag": "button",
     "elements": [
     {
       "type": "vertical",
       "elements": [
         {
-          "type": "image",
-          "url": "https://i.pinimg.com/736x/a0/67/5e/a0675e5161d7ae5be2550987f397a641--flower-shops-paper-flowers.jpg",
-          "tooltip": "Flowers"
-        },
-        {
           "type": "text",
           "tag": "title",
-          "text": "Birthday Bouquet",
-          "tooltip": "Title"
-        },
-        {
-          "type": "text",
-          "tag": "subtitle",
-          "text": "Wild flowers",
-          "tooltip": "subtitle"
+          "text": "Button example template",
+          "tooltip": "Button example template"
         },
         {
           "type": "button",
-          "tooltip": "publish text example",
-          "title": "publish text example",
+          "tooltip": "Publish text example",
+          "title": "Publish text example",
           "click": {
             "actions": [
               {
@@ -92,31 +81,18 @@ def webhook():
               {
                 "type": "link",
                 "name": "URL button tap",
-                "uri": "https://www.pinterest.com/lyndawhite/beautiful-flowers/"
-              }
-            ]
-          }
-        },
-        {
-          "type": "button",
-          "title": "Navigate",
-          "click": {
-               "actions": [
-              {
-                "type": "navigate",
-                "lo": 40.7562,
-                "la": -73.99861
+                "uri": "https://www.apple.com/iphone-8/specs/"
               }
             ]
           }
         }
       ]
-    }]
-                }
+    }]                   
              }
           ]
        }
     } 
+
 
     """
     res = {
