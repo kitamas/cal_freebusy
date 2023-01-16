@@ -57,7 +57,6 @@ def webhook():
                         "title": "Title",
                          "subtitle": "subtitle",
                         "image_url": "url of the image",
-
                         "buttons": [
                             {
                                 "title": "visit",
@@ -68,32 +67,6 @@ def webhook():
                     },
                     {
                         "title": "Title",
-                         "subtitle": "subtitle",
-                        "image_url": "url of the image",
-
-                        "buttons": [
-                            {
-                                "title": "Title",
-                                "url": "webpage url to open",
-                                "type": "web_url"
-                            }
-                        ]
-                    },
-                    {
-                        "title": "Title",
-                         "subtitle": "subtitle",
-                        "image_url": "url of the image",
-
-                        "buttons": [
-                            {
-                                "title": "Title",
-                                "url": "webpage url to open",
-                                "type": "web_url"
-                            }
-                        ]
-                    },
-                    {
-                        "title": "Title",
                         "subtitle": "subtitle",
                         "image_url": "url of the image",
                         "buttons": [
@@ -108,7 +81,6 @@ def webhook():
                         "title": "Title",
                         "subtitle": "subtitle",
                         "image_url": "url of the image",
-
                         "buttons": [
                             {
                                 "title": "Title",
