@@ -73,16 +73,7 @@ def webhook():
                                      "payload":"PAYLOAD"
                                   }
                                ]
-                            },
-                            {
-                               "title":"Welcome!",
-                               "image_url":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg",
-                               "subtitle":"We have the right hat for everyone.",
-                               "default_action":{
-                                  "type":"web_url",
-                                  "url":"https://www.originalcoastclothing.com/",
-                                  "webview_height_ratio":"tall"
-                               }
+                            }
                          ]
                       }
                    }
