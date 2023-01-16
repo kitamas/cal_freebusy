@@ -33,7 +33,7 @@ def favicon():
 @ app.route('/webhook', methods = ['GET', 'POST'])
 def webhook():
 
-    text = " **bold**  \n *emphasize* _italic_ [link](https://facebook.com) 1. item 2. item "
+    text = " *bold*  \n **mdw** _italic_ [link](https://facebook.com) 1. item 2. item "
 
     res = {
        "fulfillment_response":{
@@ -57,7 +57,7 @@ def webhook():
                       },
                       {
                          "content_type":"text",
-                         "title":"[link](https://facebook.com)",
+                         "title":"Green",
                          "payload":"Green color"
                       }
                    ]
