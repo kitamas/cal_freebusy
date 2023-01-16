@@ -74,8 +74,8 @@ def webhook():
                                   }
                                ]
                             },
-							                            {
-                               "title":"Welcome!",
+                            {
+                               "title":"Card 2",
                                "image_url":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg",
                                "subtitle":"We have the right hat for everyone.",
                                "default_action":{
@@ -95,7 +95,29 @@ def webhook():
                                      "payload":"PAYLOAD"
                                   }
                                ]
-                            }
+                            },
+                            {
+                               "title":"Card 3",
+                               "image_url":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg",
+                               "subtitle":"We have the right hat for everyone.",
+                               "default_action":{
+                                  "type":"web_url",
+                                  "url":"https://www.originalcoastclothing.com/",
+                                  "webview_height_ratio":"tall"
+                               },
+                               "buttons":[
+                                  {
+                                     "type":"web_url",
+                                     "url":"https://www.originalcoastclothing.com/",
+                                     "title":"View Website"
+                                  },
+                                  {
+                                     "type":"postback",
+                                     "title":"Start Chatting",
+                                     "payload":"PAYLOAD"
+                                  }
+                               ]
+                            }							
                          ]
                       }
                    }
