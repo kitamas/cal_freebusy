@@ -3,6 +3,7 @@ import flask
 import json
 import os
 from flask import send_from_directory, request
+import datetime
 # FLASK = = = = = = = = = = = 
 
 # CRED = = = = = = = = = = =
@@ -21,6 +22,8 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 # QUICKSTART = = = = = = = = = = =
 
+# https://cloud.google.com/dialogflow/cx/docs/concept/agents-prebuilt#financial-services
+
 # Flask app should start in global layout
 app = flask.Flask(__name__)
 
@@ -35,254 +38,71 @@ def webhook():
 
     text = " *bold*  \n **mdw** _italic_ [link](https://facebook.com) "
 
-
-    """
     res = {
-       "fulfillment_response":{
-          "messages":[
-             {
-                "text":{
-                   "text":[
-                      "text"
-                   ]
+        "fulfillment_response": {
+            "messages": [
+                {
+                    "text": {
+                        "text": [
+                            text
+                        ]
+                    }
                 }
-             },
-             {
-                "payload":{
-                   "attachment":{
-                      "type":"template",
-                      "payload":{
-                         "template_type":"generic",
-                         "elements":[
-                            {
-                               "title":"Welcome!",
-                               "image_url":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg",
-                               "subtitle":"We have the right hat for everyone.",
-                               "default_action":{
-                                  "type":"web_url",
-                                  "url":"https://www.originalcoastclothing.com/",
-                                  "webview_height_ratio":"tall"
-                               },
-                               "buttons":[
-                                  {
-                                     "type":"web_url",
-                                     "url":"https://www.originalcoastclothing.com/",
-                                     "title":"View Website"
-                                  },
-                                  {
-                                     "type":"postback",
-                                     "title":"Start Chatting",
-                                     "payload":"PAYLOAD"
-                                  }
-                               ]
-                            }
-                         ]
-                      }
-                   }
-                }
-             }
-          ]
-       }
+            ]
+        },
+        "session_info": {
+            "session" : "session_name",
+            "parameters": {
+                "in_hours" : true,
+                "card_verified" = 'true'
+            }
+        }
     }
-    """
-         
-    
-    """
-    res = {
-       "fulfillment_response":{
-          "messages":[
-             {
-                "text":{
-                   "text":[
-                      text
-                   ]
-                }
-             },
-             {
-                "payload":{
-                   "text":"Pick a color:",
-                   "quick_replies":[
-                      {
-                         "content_type":"text",
-                         "title":"Red",
-                         "payload":"Red color",
-                         "image_url":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
-                      },
-                      {
-                         "content_type":"text",
-                         "title":"Green",
-                         "payload":"Green color"
-                      }
-                   ]
-                }
-             }
-          ]
-       }
-    } 
-    """
-
-
-
-    res = {
-       "fulfillment_response":{
-          "messages":[
-             {
-                "text":{
-                   "text":[
-                      text
-                   ]
-                }
-             },
-             {
-                "payload":{
-                   "richContent":[
-                      [
-                         {
-                            "type":"chips",
-                            "options":[
-                               {
-                                  "text":"AI csapat",
-                                  "image":{
-                                     "src":{
-                                        "rawUrl":"https://dev.da.tsmcloud.hu/images/icon1.png"
-                                     }
-                                  },
-                                  "link":"https://dev.da.tsmcloud.hu/"
-                               },
-                               {
-                                  "text":"Telekom",
-                                  "image":{
-                                     "src":{
-                                        "rawUrl":"https://dev.da.tsmcloud.hu/images/icon2.png"
-                                     }
-                                  },
-                                  "link":"https://www.telekom.hu/"
-                               }
-                            ]
-                         }
-                      ],
-                      [
-                         {
-                            "type":"info",
-                            "title":"Info item title, card clickable tts.mp3",
-                            "subtitle":"Info item subtitle, robot.mp3",
-                            "image":{
-                               "src":{
-                                  "rawUrl":"https://dev.da.tsmcloud.hu/images/robot_icon.png"
-                               }
-                            },
-                            "actionLink":"https://dev.da.tsmcloud.hu/mp3/tts.mp3"
-                         }
-                      ],
-                      [
-                         {
-                            "type":"description",
-                            "title":"Description title",
-                            "text":[
-                               "This is text line 1",
-                               "This is text line 2"
-                            ]
-                         }
-                      ],
-                      [
-                         {
-                            "type":"image",
-                            "accessibilityText":"image",
-                            "rawUrl":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
-                         }
-                      ],
-                      [
-                         {
-                            "type":"button",
-                            "icon":{
-                               "type":"chevron_right",
-                               "color":"#FF9800"
-                            },
-                            "text":"Button text",
-                            "link":"https://example.com",
-                            "event":{
-                               "name":""
-                            }
-                         }
-                      ],
-                      [
-                         {
-                            "type":"chips",
-                            "options":[
-                               {
-                                  "text":"robot",
-                                  "image":{
-                                     "src":{
-                                        "rawUrl":"https://dev.da.tsmcloud.hu/images/robot_icon.png"
-                                     }
-                                  },
-                                  "link":"https://dev.da.tsmcloud.hu/mp3/robot.mp3"
-                               },
-                               {
-                                  "text":"yes",
-                                  "image":{
-                                     "src":{
-                                        "rawUrl":"https://dev.da.tsmcloud.hu/images/yes.png"
-                                     }
-                                  },
-                                  "link":"https://cloud.google.com/dialogflow/case-studies"
-                               },
-                               {
-                                  "text":"no",
-                                  "image":{
-                                     "src":{
-                                        "rawUrl":"https://dev.da.tsmcloud.hu/images/no.png"
-                                     }
-                                  },
-                                  "link":"https://cloud.google.com/dialogflow/docs"
-                               }
-                            ]
-                         }
-                      ],
-                      [
-                         {
-                            "type":"list",
-                            "title":"List item 1 title",
-                            "subtitle":"List item 1 subtitle",
-                            "event":{
-                               "name":""
-                            }
-                         },
-                         {
-                            "type":"divider"
-                         },
-                         {
-                            "type":"list",
-                            "title":"List item 2 title",
-                            "subtitle":"List item 2 subtitle",
-                            "event":{
-                               "name":""
-                            }
-                         }
-                      ],
-                      [
-                         {
-                            "type":"accordion",
-                            "title":"accordion title",
-                            "subtitle":"accordion subtitle",
-                            "text":"Lorem <img src=\"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg\" width=\"38\"><a target=\"_blank\" href=\"https://dev.da.tsmcloud.hu/apisandbox.html\">DEV link</a> ipsum dolor sit amet.",
-                            "image":{
-                               "src":{
-                                  "rawUrl":"https://www.creativefabrica.com/wp-content/uploads/2019/05/Robot-icon-by-ahlangraphic-580x386.jpg"
-                               }
-                            }
-                         }
-                      ]
-                   ]
-                }
-             }
-          ]
-       }
-    } 
-
-    
 
     return res
 
     app.run()
- 
+
+""" 
+def cxPrebuiltAgentsFinServ(request):
+    print('Cloud Function:', 'Invoked cloud function from Dialogflow')
+    req_data = request.get_json()
+    tag = req_data['fulfillmentInfo']['tag']
+
+    if tag:
+        # BEGIN validateAccount
+        if tag == 'validateAccount':
+            print(tag + ' was triggered.')
+            card_last_four = req_data['sessionInfo']['parameters']['card_last_four']
+
+            # card validation only fails if card number is 0000
+            if card_last_four == '0000':
+                card_verified = 'false'
+            else:
+                card_verified = 'true'
+
+            return json.dumps(
+                {"sessionInfo": {"parameters": {"card_verified": card_verified}}}), 200
+
+        # BEGIN checkInHours
+        elif tag == 'checkInHours':
+            print(tag + ' was triggered.')
+
+            # check if we are currently in hours
+            current_date = datetime.now()
+            print('current time is ' + str(current_date))
+
+            current_hour = current_date.hour
+            print('current hour is ' + str(current_hour))
+            if current_hour >= 8 and current_hour <= 20:
+                in_hours = 'true'
+                print('currently in hours')
+            else:
+                in_hours = 'false'
+                print('currently out of hours')
+
+            return json.dumps(
+                {"sessionInfo": {"parameters": {"in_hours": in_hours}}}), 200
+
+    return 'OK', 200
+"""
