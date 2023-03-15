@@ -53,8 +53,8 @@ def webhook():
         "session_info": {
             "session" : "session_name",
             "parameters": {
-                "in_hours" : 'true',
-                "card_verified" = 'true'
+                "in_hours" : "true",
+                "card_verified" : "true"
             }
         }
     }
