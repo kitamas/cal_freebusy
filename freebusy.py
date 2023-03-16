@@ -54,7 +54,8 @@ def webhook():
             "session" : "session_name",
             "parameters": {
                 "in_hours" : "true",
-                "card_verified" : "true"
+                "card_verified" : "true",
+                "loan_found" : "true"
             }
         }
     }
