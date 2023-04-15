@@ -1,10 +1,10 @@
 # ChatGPT + Dialogflow CX + Heroku 
 # https://www.youtube.com/watch?v=TrDFd4o9Kxg
 
+import openai
 import flask
 import json
 import os
-import openai
 from flask import send_from_directory, request, jsonify
 import datetime
 # from dotenv import load_dotenv
