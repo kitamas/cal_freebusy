@@ -1,109 +1,88 @@
-# FLASK = = = = = = = = = = = 
+# ChatGPT + Dialogflow CX + Heroku 
+# https://www.youtube.com/watch?v=TrDFd4o9Kxg
+
 import flask
 import json
 import os
-from flask import send_from_directory, request
+from flask import send_from_directory, request, jsonify
 import datetime
-# FLASK = = = = = = = = = = = 
+# from dotenv import load_dotenv
 
-# CRED = = = = = = = = = = =
-import googleapiclient.discovery
-from google.oauth2 import service_account as google_oauth2_service_account
-# CRED = = = = = = = = = = =
 
-# QUICKSTART = = = = = = = = = = =
-import datetime
-import os.path
-
-from google.auth.transport.requests import Request
-from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
-# QUICKSTART = = = = = = = = = = =
-
-# https://cloud.google.com/dialogflow/cx/docs/concept/agents-prebuilt#financial-services
+# opanai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = "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"
 
 # Flask app should start in global layout
 app = flask.Flask(__name__)
 
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'favicon.ico', mimetype='image/favicon.png')
+app = flask(__name__)
 
+@app.route('/dialogflow/cx/receiveMessage',methods=['POST'])
 
-@ app.route('/webhook', methods = ['GET', 'POST'])
-def webhook():
+def cxReceiveMessage():
 
-    text = " "
+    try:
 
-    res = {
-        "fulfillment_response": {
-            "messages": [
+        data = request.get_json()
+        # Use this tag property to choose the action
+        # tag = data['fulfillmentInfo']['tag']
+
+        query_text = data['text']
+
+        print(query_text)
+
+        result = text_completion(query_text)
+
+        print(result)
+        print(result['response'])
+
+        if result['status'] == 1:
+            return jsonify(
                 {
-                    "text": {
-                        "text": [
-                            text
+                    'fulfillment_response': {
+                        'messages': [
+                            {
+                                'text': {
+                                    'text': [result['response']],
+                                    'redactedText': [result['response']]
+                                },
+                            'responseType': 'HANDLER_PROMPT',
+                             'source': 'VIRTUAL_AGENT'
+                            }
                         ]
                     }
                 }
-            ]
-        },
-        "session_info": {
-            "session" : "session_name",
-            "parameters": {
-                "in_hours" : "true",
-                "card_verified" : "true",
-                "loan_found" : "true"
-            }
+            )
+
+    except Exception as e:
+            print(e)
+
+            pass
+#44
+
+#61
+
+def text_completion(prompt: str) -> dict:
+    try:
+        response = openai.Completion.create(
+            model = 'text-davinci-003',
+            prompt = f'Human: {prompt}\nAI: ',
+            temperature = 0.8,
+            max_tokens = 150,
+            top_p = 1,
+            frequency_penalty = 0,
+            stop = ['Human:','AI:']
+        )
+        return {
+            'status': 1,
+            'response': response['choices'][0]['text']
         }
-    }
+# 86
+    except Exception as e:
+        pass
+# 92
 
-    return res
+if __name__ == '__main__':
+    app.run(debug=True)
 
-    app.run()
 
-""" 
-def cxPrebuiltAgentsFinServ(request):
-    print('Cloud Function:', 'Invoked cloud function from Dialogflow')
-    req_data = request.get_json()
-    tag = req_data['fulfillmentInfo']['tag']
-
-    if tag:
-        # BEGIN validateAccount
-        if tag == 'validateAccount':
-            print(tag + ' was triggered.')
-            card_last_four = req_data['sessionInfo']['parameters']['card_last_four']
-
-            # card validation only fails if card number is 0000
-            if card_last_four == '0000':
-                card_verified = 'false'
-            else:
-                card_verified = 'true'
-
-            return json.dumps(
-                {"sessionInfo": {"parameters": {"card_verified": card_verified}}}), 200
-
-        # BEGIN checkInHours
-        elif tag == 'checkInHours':
-            print(tag + ' was triggered.')
-
-            # check if we are currently in hours
-            current_date = datetime.now()
-            print('current time is ' + str(current_date))
-
-            current_hour = current_date.hour
-            print('current hour is ' + str(current_hour))
-            if current_hour >= 8 and current_hour <= 20:
-                in_hours = 'true'
-                print('currently in hours')
-            else:
-                in_hours = 'false'
-                print('currently out of hours')
-
-            return json.dumps(
-                {"sessionInfo": {"parameters": {"in_hours": in_hours}}}), 200
-
-    return 'OK', 200
-"""
