@@ -4,12 +4,13 @@
 import flask
 import json
 import os
+import openai
 from flask import send_from_directory, request, jsonify
 import datetime
 # from dotenv import load_dotenv
 
 
-# opanai.api_key = os.getenv("OPENAI_API_KEY")
+# openai.api_key = os.getenv("OPENAI_API_KEY")
 openai.api_key = "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"
 
 # Flask app should start in global layout
