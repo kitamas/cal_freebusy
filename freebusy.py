@@ -11,7 +11,7 @@ import datetime
 
 
 # openai.api_key = os.getenv("OPENAI_API_KEY")
-openai.api_key = "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"
+# openai.api_key = "sk- . . . "
 
 # Flask app should start in global layout
 app = flask.Flask(__name__)
